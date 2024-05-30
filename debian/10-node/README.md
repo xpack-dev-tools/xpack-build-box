@@ -5,11 +5,26 @@
 
 - <https://nodejs.org/en/>
 
-Node 18 requires GLIBC 2.28 (Debian 10).
+Node 18 & 20 requires GLIBC 2.28 (Debian 10).
 
 The build script is based on:
 
 - <https://github.com/nodejs/docker-node/blob/main/18/buster/Dockerfile>
+- <https://github.com/nodejs/docker-node/blob/main/20/buster/Dockerfile>
+
+Download it with:
+
+```sh
+curl -L https://github.com/nodejs/docker-node/raw/main/18/buster/Dockerfile -o Dockerfile-v18.x.0
+```
+
+or
+
+```sh
+curl -L https://github.com/nodejs/docker-node/raw/main/20/buster/Dockerfile -o Dockerfile-v20.x.0
+```
+
+Compare with existing files and update it at the end, to invoke bash.
 
 ## Build Docker images
 
