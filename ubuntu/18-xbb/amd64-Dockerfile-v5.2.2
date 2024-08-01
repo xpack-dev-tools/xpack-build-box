@@ -1,0 +1,14 @@
+
+FROM ilegeul/ubuntu:amd64-18.04-node-v16.20.2
+
+LABEL description="Ubuntu 18.04 amd64 image, with the XBB."
+LABEL maintainer="Liviu Ionescu <ilg@livius.net>"
+LABEL repository="https://github.com/xpack/xpack-build-box.git"
+LABEL docs="https://github.com/xpack/xpack-build-box/tree/master/ubuntu/18-xbb/README.md"
+
+ENV TZ=UTC
+
+ADD input-ubuntu-18.04-amd64 /input
+RUN bash /input/build-v5.2.2.sh
+
+CMD ["/bin/bash"]
