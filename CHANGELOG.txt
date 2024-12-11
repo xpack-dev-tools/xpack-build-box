@@ -1,5 +1,9 @@
 The major changes and releases, in reverse chronological order:
 
+[2024-08-01]
+
+- v5.2.2 released
+
 [2023-09-11]
 
 - v5.1.1 released, with g++ & libraries kept in the final image.
