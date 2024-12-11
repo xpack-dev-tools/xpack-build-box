@@ -1,0 +1,12 @@
+--- bin/automake.in	2020-02-03 14:15:56.000000000 +0200
++++ bin/automake-patched.in	2020-02-03 14:16:44.000000000 +0200
+@@ -73,7 +73,8 @@
+ use Automake::Language;
+ use File::Basename;
+ use File::Spec;
+-use List::Util 'none';
++use List::Util 'reduce';
++sub none (&@) { my $code=shift; reduce { $a && !$code->(local $_ = $b) } 1, @_; }
+ use Carp;
+
+ ## ----------------------- ##

@@ -1,0 +1,11 @@
+--- ld/ldfile-orig.c	2021-12-18 01:29:31.260843599 +0200
++++ ld/ldfile.c	2021-12-18 01:30:05.101543950 +0200
+@@ -340,7 +340,7 @@
+      directory first.  */
+   if (!entry->flags.maybe_archive)
+     {
+-      if (entry->flags.sysrooted && IS_ABSOLUTE_PATH (entry->filename))
++      if (entry->flags.sysrooted && !IS_ABSOLUTE_PATH (entry->filename))
+ 	{
+ 	  char *name = concat (ld_sysroot, entry->filename,
+ 			       (const char *) NULL);

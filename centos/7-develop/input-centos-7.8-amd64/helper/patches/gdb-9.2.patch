@@ -1,0 +1,22 @@
+--- bfd/Makefile.in	2020-05-24 00:10:29.000000000 +0300
++++ bfd/Makefile-patched.in	2020-06-20 19:27:26.000000000 +0300
+@@ -2096,7 +2096,7 @@
+ 	fi ;\
+ 	$(SED) -e "s,@bfd_version@,$$bfd_version," \
+ 	    -e "s,@bfd_version_string@,$$bfd_version_string," \
+-	    -e "s,@bfd_version_package@,$$bfd_version_package," \
++	    -e "s|@bfd_version_package@|$$bfd_version_package|" \
+ 	    -e "s,@report_bugs_to@,$$report_bugs_to," \
+ 	    < $(srcdir)/version.h > $@; \
+ 	echo "$${bfd_soversion}" > libtool-soversion
+--- bfd/Makefile.am	2020-05-24 00:10:29.000000000 +0300
++++ bfd/Makefile-patched.am	2020-06-20 19:24:30.000000000 +0300
+@@ -981,7 +981,7 @@
+ 	fi ;\
+ 	$(SED) -e "s,@bfd_version@,$$bfd_version," \
+ 	    -e "s,@bfd_version_string@,$$bfd_version_string," \
+-	    -e "s,@bfd_version_package@,$$bfd_version_package," \
++	    -e "s|@bfd_version_package@|$$bfd_version_package|" \
+ 	    -e "s,@report_bugs_to@,$$report_bugs_to," \
+ 	    < $(srcdir)/version.h > $@; \
+ 	echo "$${bfd_soversion}" > libtool-soversion

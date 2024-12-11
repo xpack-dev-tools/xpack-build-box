@@ -1,0 +1,11 @@
+--- ld/ldfile-patched.c	2020-05-03 19:40:20.631770652 +0000
++++ ld/ldfile.c	2020-05-03 19:40:49.858438636 +0000
+@@ -339,7 +339,7 @@
+      directory first.  */
+   if (!entry->flags.maybe_archive)
+     {
+-      if (entry->flags.sysrooted && IS_ABSOLUTE_PATH (entry->filename))
++      if (entry->flags.sysrooted && !IS_ABSOLUTE_PATH (entry->filename))
+ 	{
+ 	  char *name = concat (ld_sysroot, entry->filename,
+ 			       (const char *) NULL);

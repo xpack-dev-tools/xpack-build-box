@@ -1,0 +1,11 @@
+--- testsuite/Makefile.in	2019-06-27 05:35:06.000000000 +0000
++++ testsuite/Makefile-patched.in	2020-02-20 21:04:25.699602962 +0000
+@@ -138,7 +138,7 @@
+ 
+ # The PATH update is for windows dlls, DYLD_LIBRARY_PATH is for OSX.
+ check: $(TS_ALL)
+-	LD_LIBRARY_PATH=../.lib PATH="../.lib:$$PATH" DYLD_LIBRARY_PATH=../.lib \
++	LD_LIBRARY_PATH="../.lib:$$LD_LIBRARY_PATH" PATH="../.lib:$$PATH" DYLD_LIBRARY_PATH="../.lib:$$DYLD_LIBRARY_PATH" \
+ 	  srcdir="$(srcdir)" \
+ 	  EMULATOR="$(EMULATOR)" NM="$(NM)" EXEEXT="$(EXEEXT)" \
+           $(top_srcdir)/run-tests $(TS_ALL)

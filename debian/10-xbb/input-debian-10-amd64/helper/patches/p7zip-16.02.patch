@@ -1,0 +1,11 @@
+--- CPP/Windows/ErrorMsg-orig.cpp	2015-01-18 20:20:28.000000000 +0200
++++ CPP/Windows/ErrorMsg.cpp	2021-01-04 15:19:56.000000000 +0200
+@@ -13,7 +13,7 @@
+   const char * txt = 0;
+   AString msg;
+ 
+-  switch(errorCode) {
++  switch((HRESULT)errorCode) {
+     case ERROR_NO_MORE_FILES   : txt = "No more files"; break ;
+     case E_NOTIMPL             : txt = "E_NOTIMPL"; break ;
+     case E_NOINTERFACE         : txt = "E_NOINTERFACE"; break ;

@@ -1,0 +1,24 @@
+--- src/gen-help.h	2013-03-15 21:26:38.000000000 +0200
++++ src/gen-help-patched.h	2020-12-12 23:33:23.000000000 +0200
+@@ -38,6 +38,9 @@
+ #define xtrymalloc(a) malloc ((a))
+ 
+ char *gen_help_stpcpy (char *a, const char *b);
++#if defined(stpcpy)
++#undef stpcpy
++#endif
+ #define stpcpy(a, b)  gen_help_stpcpy ((a), (b))
+ 
+ 
+--- src/asn1-gentables.c	2016-08-22 12:38:21.000000000 +0300
++++ src/asn1-gentables-patched.c	2020-12-12 23:57:26.000000000 +0200
+@@ -40,6 +40,9 @@
+ #define DEVNULL_NAME "/dev/null"
+ #endif
+ 
++int ksba_asn_parse_file (const char *filename, ksba_asn_tree_t *result,
++                         int debug);
++void ksba_asn_tree_dump (ksba_asn_tree_t tree, const char *name, FILE *fp);
+ 
+ /* keep track of parsing error */
+ static int error_counter;
