@@ -1,0 +1,73 @@
+# https://docs.npmjs.com/files/package.json#files
+# Certain files are always included, regardless of settings:
+# - package.json
+# - README
+# - CHANGES / CHANGELOG / HISTORY
+# - LICENSE / LICENCE
+# - NOTICE
+# - The file in the "main" field
+# README, CHANGES, LICENSE & NOTICE can have any case and extension.
+#
+# Conversely, some files are always ignored:
+# - .git
+# - CVS
+# - .svn
+# - .hg
+# - .lock-wscript
+# - .wafpickle-N
+# - .*.swp
+# - .DS_Store
+# - ._*
+# - npm-debug.log
+# - .npmrc
+# - node_modules
+# - config.gypi
+# - *.orig
+# -----------------------------------------------------------------------------
+# .gitignore is not automatically included, add relevant lines again.
+
+
+# npm
+/*.tgz
+
+# tap
+/coverage/
+/tests/
+
+# nyc test coverage
+/.nyc_output/
+
+# VS Code
+/.vscode/
+
+# CI
+/.github/
+/.travis.yml
+/.appveyor.yml
+
+README-*.md
+
+/src/
+**/tsconfig*.json
+
+*.ts
+lib/**/*.ts
+# The above removes all TypeScript including the .d.ts files.
+# Bring those later back.
+!*.d.ts
+!lib/*.d.ts
+
+tsconfig.tsbuildinfo
+
+/tests/
+
+typedoc.json
+/docs/
+# /assets/ # keep it, xpm needs it.
+/scripts/
+/website/
+/tmp/
+
+.tap
+
+#end

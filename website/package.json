@@ -1,0 +1,71 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "generate-typedoc": "docusaurus generate-typedoc",
+    "typecheck": "tsc",
+    "npm-outdated": "npm outdated",
+    "npm-install": "npm install",
+    "npm-ci": "npm ci",
+    "npm-link-helper": "npm link @xpack/docusaurus-template-liquid @xpack/npm-packages-helper",
+    "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh",
+    "import-website-releases": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/website-import-releases.sh",
+    "generate-website-blog-post": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-blog-post.sh"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.6.3",
+    "@docusaurus/plugin-client-redirects": "3.6.3",
+    "@docusaurus/plugin-ideal-image": "3.6.3",
+    "@docusaurus/preset-classic": "3.6.3",
+    "@mdx-js/react": "^3.1.0",
+    "clsx": "^2.1.1",
+    "prism-react-renderer": "^2.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.6.3",
+    "@docusaurus/tsconfig": "3.6.3",
+    "@docusaurus/types": "3.6.3",
+    "docusaurus-plugin-typedoc": "^1.1.1",
+    "json": "^11.0.0",
+    "typedoc": "^0.27.3",
+    "typedoc-plugin-markdown": "^4.3.2",
+    "typescript": "~5.6.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  },
+  "websiteConfig": {
+    "longName": "xPack Build Box",
+    "title": "XBB - The xPack Build Box",
+    "tagline": "The environment used to build the xPack Binary Development Tools",
+    "metadataDescription": "The environment used to build the xPack Binary Development Tools",
+    "metadataKeywords": "xpack, build, box",
+    "nodeVersion": "18.20.4",
+    "hasCustomHomepageFeatures": "true",
+    "skipInstallWithCopy": "true"
+  }
+}

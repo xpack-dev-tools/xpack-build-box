@@ -1,39 +1,25 @@
-# XBB (xPack Build Box)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack-dev-tools/xpack-build-box)](https://github.com/xpack-dev-tools/xpack-build-box/blob/master/package.json)
+[![npm (scoped)](https://img.shields.io/npm/v/xpack-build-box.svg?color=blue)](https://www.npmjs.com/package/xpack-build-box/)
+[![license](https://img.shields.io/github/license/xpack-dev-tools/xpack-build-box)](https://github.com/xpack-dev-tools/xpack-build-box/blob/master/LICENSE)
 
-The [xPack Build Box](https://xpack.github.io/xbb/)
-is an elaborated build environment focused on
-obtaining reproducible builds while creating cross-platform standalone
-binaries for GNU/Linux, macOS and Windows.
+# The xPack Build Box
 
-## Overview
+The environment used to build the xPack Binary Development Tools.
 
-This open source project is hosted on GitHub as
-[`xpack/xpack-build-box`](https://github.com/xpack/xpack-build-box)
-and provides the scripts to create the xPack build environments
-(either Docker images on GNU/Linux or separate folders on macOS).
+## Project documentation
 
-## More info
+For information on how to install and use this project,
+please refer to the
+[project web site](https://xpack-dev-tools.github.io/xpack-build-box/).
 
-- [Homepage](https://xpack.github.io/xbb/)
-- [Prerequisites](https://xpack.github.io/xbb/prerequisites/)
-- [End of support](https://xpack.github.io/xbb/end-of-support/) schedule
-  for various Linux distributions
-- [Releases](https://xpack.github.io/xbb/releases/)
+## Project source
 
-Starting with 2023, all builds will be performed with v5.0.0 or later,
-which uses binary xPacks on top of simple npm images.
-
-The current Docker images are:
-
-- [ubuntu/18-xbb](ubuntu/18-xbb/)
-
-## Credits
-
-The xPack Build Box is inspired by the
-[Holy Build Box](https://github.com/phusion/holy-build-box)
+The source code of the current release is available
+on [GitHub tag v0.0.0 tree](https://github.com/xpack-dev-tools/xpack-build-box/tree/v0.0.0).
 
 ## License
 
-The original content is released under the
-[MIT License](https://opensource.org/licenses/MIT), with all rights
-reserved to [Liviu Ionescu](https://github.com/ilg-ul/).
+Unless otherwise stated, the original content is released under the terms of the
+[MIT License](https://opensource.org/licenses/mit/),
+with all rights reserved to
+[Liviu Ionescu](https://github.com/ilg-ul).

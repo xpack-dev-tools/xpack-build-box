@@ -1,0 +1,39 @@
+{/* DO NOT EDIT! */}
+{/* Automatically generated from xbb-helper/templates/docusaurus/common. */}
+
+{/* ------------------------------------------------------------------------ */}
+
+## Get project sources
+
+The project is hosted on GitHub:
+
+- https://github.com/xpack-dev-tools/xpack-build-box.git
+
+The project uses multiple branches:
+
+- `master`, with the latest stable version (default)
+- `development`, with the current development version
+- `website`, with the current content of the website; pushes to this branch automatically trigger publishes the main website
+
+To clone the stable branch (`master`), run the following commands in a
+terminal (on Windows use the Git Bash console):
+
+```sh
+mkdir ~/Work/npm-packages && cd ~/Work/npm-packages
+git clone https://github.com/xpack-dev-tools/xpack-build-box.git xpack-build-box.git
+```
+
+For **development** purposes, clone the `development` branch:
+
+```sh
+mkdir ~/Work/npm-packages && cd ~/Work/npm-packages
+git clone \
+  --branch development \
+  https://github.com/xpack-dev-tools/xpack-build-box.git xpack-build-box.git
+```
+
+Or, if the repo was already cloned:
+
+```sh
+git -C ~/Work/npm-packages/xpack-build-box.git pull
+```

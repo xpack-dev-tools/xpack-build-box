@@ -1,0 +1,63 @@
+{
+  "name": "xpack-build-box",
+  "version": "0.0.0-0",
+  "description": "XBB - The xPack Build Box",
+  "main": "",
+  "scripts": {
+    "postversion": "git push origin --all && git push origin --tags",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-top-commons-init": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh --init",
+    "create-website-init": "bash -x node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --init",
+    "npm-install": "npm install",
+    "npm-link-helpers": "npm link @xpack/npm-packages-helper @xpack/docusaurus-template-liquid",
+    "npm-link": "npm link",
+    "npm-outdated": "npm outdated",
+    "npm-update": "npm update",
+    "npm-pack": "npm pack",
+    "npm-version-patch": "npm version patch",
+    "npm-version-minor": "npm version minor",
+    "git-log": "git log --pretty='%cd * %h %s' --date=short",
+    "prepublishOnly": "npm run lint && npm run test",
+    "postpublish": "git push origin --follow-tags",
+    "clean": "del-cli cjs 'tests/**/cjs' 'src/**/*.d.ts' 'src/**/*.d.ts.map' 'src/**/*.js' 'src/**/*.js.map' 'tests/**/*.d.ts' 'tests/**/*.d.ts.map' 'tests/**/*.js' 'tests/**/*.js.map' '**/tsconfig.tsbuildinfo' .nyc_output coverage",
+    "deep-clean": "npm run clean && rm -rf node_modules package-lock.json",
+    "show-versions": "echo $(which node) $(node --version) && echo $(which npm) $(npm --version)",
+    "dumpconf": "env | sort | uniq",
+    "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpack-dev-tools/xpack-build-box.git"
+  },
+  "keywords": [
+    "www",
+    "xbb",
+    "xpack",
+    "build",
+    "box"
+  ],
+  "author": {
+    "name": "Liviu Ionescu",
+    "email": "ilg@livius.net",
+    "url": "https://github.com/ilg-ul"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpack-dev-tools/xpack-build-box/issues"
+  },
+  "homepage": "https://xpack-dev-tools.github.io/xpack-build-box/",
+  "dependencies": {},
+  "devDependencies": {
+    "json": "^11.0.0",
+    "liquidjs": "^10.18.0",
+    "del-cli": "^6.0.0"
+  },
+  "bundleDependencies": [],
+  "config": {
+    "skipTests": "true"
+  },
+  "engines": {
+    "node": " >=18.0.0"
+  }
+}
