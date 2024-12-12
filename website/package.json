@@ -64,7 +64,6 @@
     "tagline": "The environment used to build the xPack Binary Development Tools",
     "metadataDescription": "The environment used to build the xPack Binary Development Tools",
     "metadataKeywords": "xpack, build, box",
-    "nodeVersion": "18.20.4",
     "hasCustomHomepageFeatures": "true",
     "skipInstallCommand": "true",
     "skipContributorGuide": "true",
