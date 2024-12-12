@@ -245,8 +245,12 @@ const config: Config = {
               to: '/docs/install'
             },
             {
-              label: 'User Information',
+              label: 'User\'s Guide',
               to: '/docs/user'
+            },
+            {
+              label: 'Maintainer\'s Guide',
+              to: '/docs/maintainer'
             },
             {
               label: 'Help Centre',

@@ -1,0 +1,160 @@
+---
+
+title: xPack Build Box v3.4 released
+seo_title: Version 3.4 released
+description: Version 3.4 is a new release of xPack Build Box.
+keywords:
+  - xpack
+  - xbb
+  - release
+
+date: 2021-12-16 12:00:00 +0200
+
+authors: ilg-ul
+
+# To be listed in the Releases page.
+tags:
+  - releases
+
+# ----- Custom properties -----------------------------------------------------
+
+version: 3.4
+
+---
+
+import {PageMetadata} from '@docusaurus/theme-common';
+import Image from '@theme/IdealImage';
+import CodeBlock from '@theme/CodeBlock';
+
+{/* ------------------------------------------------------------------------ */}
+
+# xPack Build Box v3.4 released
+
+Version **3.4** is a new release; it adds Support for Apple Silicon.
+
+<!-- truncate -->
+
+<PageMetadata title={frontMatter.seo_title} />
+
+The xPack Build Box (XBB) is a build environment intended for reproducible builds.
+
+## Supported platforms
+
+XBB supports building binaries for the following platforms:
+
+- x64 GNU/Linux
+- arm64/arm GNU/Linux
+- x64 macOS
+- x64 Windows
+
+Windows binaries are built on GNU/Linux, using mingw-w64.
+
+## Compatibility
+
+To allow the resulting binaries to run on as many existing systems
+as possible, the XBB build environments are on purpose based on older
+GNU/Linux and macOS releases:
+
+- x64/arm64/arm GNU/Linux: Ubuntu 12.04 with **GLIBC 2.27**; this
+should provide compatibility with:
+  - Ubuntu 18 or later
+  - Debian 10 or later
+  - RedHat 8 or later
+  - Fedora 29 or later
+  - any other distributions using GLIBC 2.15 or higher
+- x86/x64 Windows: Windows 7 with the new Universal C Runtime
+  ([UCRT](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c))
+- x64 macOS: 10.13; this should provide compatibility with macOS 10.13 or later
+- arm64 macOS 11.6; this should provide compatibility with macOS 11.6 or later
+
+
+### GLIBC version
+
+To find out the GLIBC version on a given GNU/Linux distribution, use:
+
+```sh
+ldd --version
+```
+
+## Tools versions
+
+In version 3.3, the main tools provided by XBB were updated to:
+
+- GCC 11.2.0
+- binutils 2.36.1
+- mingw-w64 9.0.0
+- m4 1.4.19
+- gawk 5.1.1
+- sed 4.8
+- autoconf 2.71
+- automake 1.16.5
+- make 4.3
+- perl 5.34.0
+- cmake 3.21.4
+- python 3.9.9
+- ninja 1.10.2
+- wine 6.17
+
+For the full list of available tools, see the
+[common-versions-xbb-source.sh](https://github.com/xpack/xpack-build-box/blob/master/helper/common-versions-xbb-source.sh) file.
+
+## GNU/Linux Docker images
+
+On GNU/Linux, the production XBB consists of multiple Docker images,
+in pairs of 32/64-bit, for each platform and version.
+
+The images are published on
+[Docker Hub](https://hub.docker.com/repository/docker/ilegeul/ubuntu)
+(pulling can be done anonymously, pushing requires login).
+
+Intel GNU/Linux:
+
+- `ilegeul/ubuntu:amd64-18.04-xbb-v3.4`
+
+```console
+$ docker images
+REPOSITORY       TAG                              IMAGE ID       CREATED        SIZE
+ilegeul/ubuntu   amd64-18.04-xbb-v3.4             ace5ae2e98e5   4 weeks ago    5.11GB
+```
+
+The images were created on a Debian 10
+running on an Intel NUC.
+
+Arm GNU/Linux:
+
+- `ilegeul/ubuntu:arm64v8-18.04-xbb-v3.4`
+- `ilegeul/ubuntu:arm32v7-18.04-xbb-v3.4`
+
+```console
+REPOSITORY            TAG                                IMAGE ID       CREATED         SIZE
+ilegeul/ubuntu        arm64v8-18.04-xbb-v3.4             4e7f14f6c886   3 weeks ago     3.29GB
+ilegeul/ubuntu        arm32v7-18.04-xbb-v3.4             a3718a8e6d0f   3 weeks ago     2.92GB
+```
+
+The arm64v8 image was created on a 64-bit Raspberry Pi OS
+running on a Raspberry CM4 with 8 GB RAM. The arm32v7 image was built on a
+32-bit Raspberry Pi OS with 4 GB RAM.
+
+## macOS
+
+When running on macOS, the build scripts cannot use Docker, since there
+are no macOS Docker images; instead,
+a custom set of tools is expected in a specific folder
+(like `${HOME}/.local/xbb`),
+which includes the same tools as packed in the Docker images.
+
+### Command Line Tools
+
+As usual with macOS, the compiler and other development tools are not
+packed in the base system and need to be installed separately as part of the
+**Command Line Tools** package, available from
+[Apple](https://developer.apple.com).
+
+The XBB binaries expect the CLT binary tools to be present in a
+fixed location, which is:
+
+- `/Library/Developer/CommandLineTools/usr/bin`
+
+## TeX
+
+All platforms include an instance of the 2018 TeX Live tools.

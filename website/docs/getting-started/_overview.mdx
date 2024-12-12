@@ -3,3 +3,23 @@ import CommonJsCompatibility from './_common/_commonjs-compatibility.mdx'
 import GithubAndNpmjs from './_common/_github-and-npmjs.mdx'
 
 {/* ------------------------------------------------------------------------ */}
+
+The **xPack Build Box** (XBB) is an sophisticated build environment designed to achieve **reproducible** results when creating **cross-platform standalone binaries** for GNU/Linux, macOS, and Windows.
+
+## Features
+
+XBB ensures repeatability and consistency by:
+
+- **Controlling the versions** of the tools used during the build process.
+- **Compiling** most dependencies (libraries) from **source**.
+
+By strictly controlling the versions of the compiled sources and tools, it is possible to create build environments that utilise the same tools on both GNU/Linux and macOS, thereby ensuring **consistent** results.
+
+On GNU/Linux, to facilitate builds on any distribution, the actual builds are executed within **Docker containers** (x64, aarch64).
+
+On macOS, the builds are conducted on standard systems without the need for custom tools, provided the systems are pristine and free from additional tools installed via alternative package managers such as Homebrew or MacPorts.
+
+## Benefits
+
+- All builds can be executed on any version of GNU/Linux or macOS, including those available in CI/CD environments.
+- The builds are reproducible.

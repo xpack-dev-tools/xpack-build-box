@@ -66,6 +66,9 @@
     "metadataKeywords": "xpack, build, box",
     "nodeVersion": "18.20.4",
     "hasCustomHomepageFeatures": "true",
-    "skipInstallWithCopy": "true"
+    "skipInstallCommand": "true",
+    "skipContributorGuide": "true",
+    "hasCustomUserSidebar": "true",
+    "hasCustomMaintainer": "true"
   }
 }

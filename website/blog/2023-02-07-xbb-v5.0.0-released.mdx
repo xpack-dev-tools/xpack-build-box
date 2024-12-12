@@ -1,0 +1,139 @@
+---
+
+title: xPack Build Box v5.0.0 released
+seo_title: Version 5.0.0 released
+description: Version 5.0.0 is a new release of xPack Build Box.
+keywords:
+  - xpack
+  - xbb
+  - release
+
+date: 2023-02-07 19:13:00 +0200
+authors: ilg-ul
+
+# To be listed in the Releases page.
+tags:
+  - releases
+
+# ----- Custom properties -----------------------------------------------------
+
+version: 5.0.0
+
+---
+
+# xPack Build Box v5.0.0 released
+
+Version **5.0.0** is a new release; it no longer uses monolithic Docker images, but splits the dependencies amongst multiple binary xPacks.
+
+<!-- truncate -->
+
+<PageMetadata title={frontMatter.seo_title} />
+
+The xPack Build Box (XBB) is a build environment intended for reproducible builds.
+
+Version 5.0.0 represents a **major milestone**
+for the xPack project, since it is the first **self-sustained** release,
+which allows to build new binary xPacks using previous xPacks,
+and does not require any custom Docker images, or other compiled tools.
+
+## Tools versions
+
+In version 5.0.0, the main tools are no longer part of the core XBB,
+but are installed as binary xPacks, so
+each project can have its own selection of tools from the
+wide range of available binary xPacks.
+
+## Supported platforms
+
+XBB supports building binaries for the following platforms:
+
+- x64 GNU/Linux
+- arm64/arm GNU/Linux
+- x64 macOS
+- x64 Windows
+
+Windows binaries are built on GNU/Linux, using **mingw-w64-gcc**.
+
+## Compatibility
+
+To allow the resulting binaries to run on as many existing systems
+as possible, the XBB build environments are on purpose based on older
+GNU/Linux and macOS releases:
+
+- x64/arm64/arm GNU/Linux: Ubuntu 12.04 with **GLIBC 2.27**; this
+should provide compatibility with:
+  - Ubuntu 18 or later
+  - Debian 10 or later
+  - RedHat 8 or later
+  - Fedora 29 or later
+  - any other distributions using GLIBC 2.15 or higher
+- x64 Windows: Windows 7 with the new Universal C Runtime
+  ([UCRT](https://support.microsoft.com/en-us/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c))
+- x64 macOS: 10.13; this should provide compatibility with macOS 10.13 or later
+- arm64 macOS 11.6; this should provide compatibility with macOS 11.6 or later
+
+### GLIBC version
+
+To find out the GLIBC version on a given GNU/Linux distribution, use:
+
+```sh
+ldd --version
+```
+
+## Linux Docker images
+
+On GNU/Linux, the production XBB consists of several Docker images.
+
+The images are published on
+[Docker Hub](https://hub.docker.com/repository/docker/ilegeul/ubuntu)
+(pulling can be done anonymously, pushing requires login).
+
+Intel GNU/Linux:
+
+- `ilegeul/ubuntu:amd64-18.04-xbb-v5.0.0`
+
+```console
+$ docker images
+REPOSITORY       TAG                      IMAGE ID       CREATED         SIZE
+ilegeul/ubuntu   amd64-18.04-xbb-v5.0.0   5974fda9979c   3 months ago    908MB
+```
+
+The images were created on a Debian 10
+running on an GIGABYTE B550M DS3H with AMD Ryzen 5 5600G.
+
+Arm GNU/Linux:
+
+- `ilegeul/ubuntu:arm64v8-18.04-xbb-v5.0.0`
+- `ilegeul/ubuntu:arm32v7-18.04-xbb-v5.0.0`
+
+```console
+REPOSITORY       TAG                        IMAGE ID       CREATED         SIZE
+ilegeul/ubuntu   arm64v8-18.04-xbb-v5.0.0   baa7d6c9797e   3 months ago    758MB
+ilegeul/ubuntu   arm32v7-18.04-xbb-v5.0.0   b071935af982   3 months ago    657MB
+```
+
+The arm64v8 image was created on a Raspberry Pi4 OS 64-bit running on a RPi4
+with 8 GB RAM. The arm32v7 image was built on a Raspberry Pi OS 32-bit with
+running on a RPi4 with 4 GB RAM.
+
+## macOS
+
+When running on macOS, the build scripts cannot use Docker, since there
+are no macOS Docker images; instead,
+a standard system and the Command Line Tools are required.
+
+### Command Line Tools
+
+As usual with macOS, the compiler and other development tools are not
+packed in the base system and need to be installed separately as part of the
+**Command Line Tools** package, available from
+[Apple](https://developer.apple.com).
+
+The XBB binaries expect the CLT binary tools to be present in a
+fixed location, which is:
+
+- `/Library/Developer/CommandLineTools/usr/bin`
+
+## TeX
+
+The dependency to TeX was removed.

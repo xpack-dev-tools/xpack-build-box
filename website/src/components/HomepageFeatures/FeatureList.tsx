@@ -1,4 +1,7 @@
 /*
+ * DO NOT EDIT!
+ * Automatically generated from docusaurus-template-liquid/templates/docusaurus.
+ *
  * This file is part of the xPack project (http://xpack.github.io).
  * Copyright (c) 2024 Liviu Ionescu. All rights reserved.
  *
@@ -11,15 +14,15 @@
 
 import Link from '@docusaurus/Link';
 
-import type {FeatureItem} from './FeatureItem'
+import type { FeatureItem } from './FeatureItem'
 
 export const FeatureList: FeatureItem[] = [
   {
-    title: 'Large-scale, Cross-platform',
+    title: 'Multi-language, cross-platform',
     Svg: require('@site/static/img/mosaic.svg').default,
     description: (
       <>
-        The <b>xPack Build Box</b> is designed to automate the building and testing of <b>large-scale projects</b>, with <b>many dependencies</b>, on both <b>GNU/Linux</b> and <b>macOS</b>.
+        The module is compatible with <b>TypeScript</b> and <b>JavaScript</b> projects, and can be utilized across multiple platforms (<b>Windows</b>, <b>macOS</b>, <b>GNU/Linux</b>).
       </>
     ),
   },
@@ -28,16 +31,16 @@ export const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/check-badge.svg').default,
     description: (
       <>
-        XBB ensures a consistent environment with <b>identical versions</b> of dependencies, irrespective of the distribution or version of the development platform.
+        Projects refer to this module via an explicitly versioned <b>dependency</b>. This ensures reproducibility, which is especially beneficial in <b>CI/CD</b> environments.
       </>
     ),
   },
   {
-    title: 'Part of the xPack ecosystem',
+    title: 'Part of the Node.js ecosystem',
     Svg: require('@site/static/img/globe.svg').default,
     description: (
       <>
-        The tools are not hard-coded in the environment but are installed as <b>binary dependencies</b> with <b><Link to="https://xpack.github.io/xpm/">xpm</Link></b>. This approach offers significant flexibility and extensibility.
+        The module can be installed with <b>npm</b> from the <b>npmjs.com</b> public repository, just like millions of other packages.
       </>
     ),
   },

@@ -15,4 +15,41 @@ date: 2024-10-24 23:58:00 +0300
 
 # The xPack Build Box history
 
-The project was created in **DATE**.
+The project was initiated in **January 2018** to address the need for a build environment capable of integrating `arm-none-eabi-gcc` into **GNU ARM Eclipse**.
+
+
+The initial release, version **1**, drew inspiration from
+[Holy Build Box](https://phusion.github.io/holy-build-box/). It utilised
+CentOS 6 Docker images for GNU/Linux and Homebrew for macOS
+
+## March 2019
+
+In March 2019, version **2** was released, incorporating a major rework
+
+## January 2020
+
+In January 2020, version **3** introduced an upgrade to Ubuntu 12
+for x64 and Ubuntu 16 for Arm.
+
+The build process was divided into two steps, starting with a bootstrap phase that included essential tools required to build the final tools.
+
+## January 2023
+
+The complexity of the custom builds increased to the point where the entire project became difficult to manage, taking days to complete.
+
+The solution was to migrate all tools to binary xPacks. This was accomplished
+in two steps. In the intermediate version **4**, all tools were packaged as
+binary xPacks, known as the
+[The xPack XBB Bootstrap](https://github.com/xpack-dev-tools/xbb-bootstrap-xpack). The base XBB environment was simplified to standard Docker images or
+macOS systems.
+
+The next step, version **5**, upgraded the environment to Ubuntu 18
+
+The v5.0.0 release represents a **major milestone**
+for the xPack project, since it is the **first self-sustained** release,
+which allows to build new binary xPacks using previous xPacks,
+without requiring any custom Docker images, or other compiled tools.
+
+## The foreseeable future
+
+The next step is planned for 2025, featuring an upgrade to Debian 10 and the deprecation of Arm 32-bit support.
