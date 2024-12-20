@@ -75,8 +75,11 @@ const config: Config = {
   organizationName: 'xpack-dev-tools', // Usually your GitHub org/user name.
   projectName: 'xpack-build-box', // Usually your repo name.
 
+  onBrokenAnchors: 'throw',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
+
+  onDuplicateRoutes: 'throw',
 
   // Useful for the sitemap.xml, to avoid redirects, since
   // GitHub redirects all to trailing slash.

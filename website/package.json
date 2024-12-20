@@ -20,7 +20,9 @@
     "npm-link-helper": "npm link @xpack/docusaurus-template-liquid @xpack/npm-packages-helper",
     "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh",
     "import-website-releases": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/website-import-releases.sh",
-    "generate-website-blog-post": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-blog-post.sh"
+    "generate-website-blog-post": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-blog-post.sh",
+    "deep-clean": "del-cli .docusaurus build node_modules package-lock.json",
+    "generate-dependencies-details": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-dependencies-details.sh"
   },
   "dependencies": {
     "@docusaurus/core": "3.6.3",
@@ -31,7 +33,8 @@
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "del-cli": "^6.0.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.6.3",

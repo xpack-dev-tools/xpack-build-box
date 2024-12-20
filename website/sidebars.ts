@@ -23,7 +23,6 @@ const sidebars: SidebarsConfig = {
       id: 'getting-started/index',
       label: 'Getting Started'
     },
-    
     userSidebarCategory,
     {
       type: 'doc',

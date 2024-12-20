@@ -3,7 +3,7 @@
 
 # The xPack Build Box
 
-The environment used to build the xPack Binary Development Tools.
+The environment used to build the xPack Binary Development Tools
 
 ## Project documentation
 
@@ -13,10 +13,8 @@ please refer to the
 
 ## Project source
 
-
 The source code is available on
 [GitHub](https://github.com/xpack-dev-tools/xpack-build-box/).
-
 
 ## License
 
