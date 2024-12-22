@@ -1,7 +1,7 @@
 ---
 
 title: Prerequisites for building xPack binaries
-permalink: /xbb/prerequisites/
+permalink: /dev-tools/xbb/prerequisites/
 
 comments: true
 toc: false

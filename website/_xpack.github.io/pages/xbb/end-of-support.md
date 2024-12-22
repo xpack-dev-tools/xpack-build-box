@@ -1,7 +1,7 @@
 ---
 
 title: End-of-support schedule
-permalink: /xbb/end-of-support/
+permalink: /dev-tools/xbb/end-of-support/
 
 comments: true
 

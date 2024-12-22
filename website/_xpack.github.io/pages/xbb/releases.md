@@ -1,7 +1,7 @@
 ---
 
 title: The xPack Build Box releases
-permalink: /xbb/releases/
+permalink: /dev-tools/xbb/releases/
 
 search: exclude
 github_editme: false

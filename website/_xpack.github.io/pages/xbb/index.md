@@ -1,7 +1,7 @@
 ---
 
 title: The xPack Build Box
-permalink: /xbb/
+permalink: /dev-tools/xbb/
 
 summary: A reproducible environment for building binary xPacks.
 
