@@ -29,7 +29,9 @@
     "@docusaurus/plugin-client-redirects": "3.6.3",
     "@docusaurus/plugin-ideal-image": "3.6.3",
     "@docusaurus/preset-classic": "3.6.3",
+    "@docusaurus/theme-search-algolia": "3.6.3",
     "@mdx-js/react": "^3.1.0",
+    "clean-css": "~5.3.3",
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.0",
     "react": "^18.0.0",
@@ -42,7 +44,7 @@
     "@docusaurus/types": "3.6.3",
     "docusaurus-plugin-typedoc": "^1.1.1",
     "json": "^11.0.0",
-    "typedoc": "^0.27.3",
+    "typedoc": "^0.27.5",
     "typedoc-plugin-markdown": "^4.3.2",
     "typescript": "~5.6.3"
   },

@@ -1,0 +1,7 @@
+Sitemap: https://xpack-dev-tools.github.io/xpack-build-box/sitemap.xml
+
+User-agent: *
+Disallow: /xpack-build-box/blog/archive/
+Disallow: /xpack-build-box/blog/authors/
+Disallow: /xpack-build-box/blog/page/
+Disallow: /xpack-build-box/blog/tags/
