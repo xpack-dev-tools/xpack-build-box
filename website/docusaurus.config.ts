@@ -295,14 +295,24 @@ const config: Config = {
           'aria-label': 'GitHub repository',
         },
         {
-          href: 'https://github.com/xpack/',
-          label: 'xpack',
+          type: 'dropdown',
+          href: 'https://github.com/xpack-dev-tools/xpack-build-box/',
           position: 'right',
-        },
-        {
-          href: 'https://github.com/xpack-dev-tools/',
-          label: 'xpack-dev-tools',
-          position: 'right',
+          label: 'GitHub',
+          items: [
+            {
+              label: `xpack-build-box`,
+              href: `https://github.com/xpack-dev-tools/xpack-build-box/`,
+            },
+            {
+              label: 'xpack',
+              href: 'https://github.com/xpack/',
+            },
+            {
+              label: 'xpack-dev-tools',
+              href: 'https://github.com/xpack-dev-tools/',
+            },
+          ]
         },
       ],
     },
