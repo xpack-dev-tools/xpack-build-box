@@ -93,59 +93,68 @@ const config: Config = {
     locales: ['en'],
   },
 
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/xpack-dev-tools/xpack-build-box/edit/master/website/',
-          // showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/xpack-dev-tools/xpack-build-box/edit/master/website/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        sitemap: {
-          // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
-          changefreq: 'weekly',
-          priority: 0.5,
-          // ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
-    ],
-  ],
-
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        sidebarPath: './sidebars.ts',
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        editUrl: 'https://github.com/xpack/xpack.github.io/edit/master/website/',
+        // showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog
+      '@docusaurus/plugin-content-blog',
+      {
+        showReadingTime: true,
+        feedOptions: {
+          type: ['rss', 'atom'],
+          xslt: true,
+        },
+        // Please change this to your repo.
+        // Remove this to remove the "edit this page" links.
+        editUrl: 'https://github.com/xpack-dev-tools/xpack-build-box/edit/master/website/',
+        // Useful options to enforce blogging best practices
+        onInlineTags: 'warn',
+        onInlineAuthors: 'warn',
+        onUntruncatedBlogPosts: 'warn',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {}
+    ],
     [
       // https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-client-redirects#redirects
       '@docusaurus/plugin-client-redirects',
-      redirects
+      redirects,
+    ],
+    [
+      '@docusaurus/plugin-debug',
+      {}
     ],
     [
       // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-google-gtag
       // https://tagassistant.google.com
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-T50NMR8JZ1',
+        trackingID: 'G-8WX9T80JEK',
         anonymizeIP: false,
+      }
+    ],
+    [
+      // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
+      // https://cronica-it.github.io/sitemap.xml
+      '@docusaurus/plugin-sitemap',
+      {
+        // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-sitemap
+        changefreq: 'weekly',
+        priority: 0.5,
+        // ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
       }
     ],
     [
@@ -163,6 +172,20 @@ const config: Config = {
     './src/plugins/SelectReleasesPlugin',
   ],
 
+  themes: [
+    [
+      '@docusaurus/theme-classic',
+      {
+        customCss: './src/css/custom.css',
+      }
+    ],
+    [
+      // https://docusaurus.io/docs/search#using-algolia-docsearch
+      '@docusaurus/theme-search-algolia',
+      {
+      }
+    ],
+  ],
 
   // https://docusaurus.io/docs/api/docusaurus-config#headTags
   headTags: [
@@ -238,7 +261,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: 'Getting Started',
+          label: 'Documentation',
           to: 'docs/getting-started',
           position: 'left',
           items: [
@@ -390,24 +413,42 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     // https://docusaurus.io/docs/search#using-algolia-docsearch
+    // https://docsearch.algolia.com/docs/docsearch-v3/
     algolia: {
-      // https://docsearch.algolia.com/docs/docsearch-v3/
+      // The application ID provided by Algolia
       appId: "KIDD7R4CL1",
+
+      // Public API key: it is safe to commit it
       apiKey: "ca2ffc431941284609f2d50202fc5506",
+
       indexName: "xpackio",
 
       // It ensures that search results are relevant to the current
       // language and version. Enabled by default.
       contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur
+      // through window.location instead on history.push. Useful when
+      // our Algolia config crawls multiple documentation sites and
+      // we want to navigate with window.location.href to them.
+      // externalUrlRegex: 'external\\.com|domain\\.com',
+      externalUrlRegex: 'xpack\\.github\\.io|xpack-dev-tools\\.github\\.io',
+
       // Optional: Replace parts of the item URLs from Algolia.
       // Useful when using the same search index for multiple deployments
       // using a different baseUrl. You can use regexp or string in the
       // `from` param. For example: localhost:3000 vs myCompany.com/docs
-      // replaceSearchResultPathname: undefined,
+      // replaceSearchResultPathname: {
+      //  from: '/docs/', // or as RegExp: /\/docs\//
+      //  to: '/',
+      // },
+
       // Optional: Algolia search parameters
       searchParameters: {},
+
       // Optional: path for search page that enabled by default (`false` to disable it)
       searchPagePath: 'search',
+
       // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
     },
