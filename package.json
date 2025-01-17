@@ -39,7 +39,10 @@
     "liquidjs": "^10.19.1"
   },
   "bundleDependencies": [],
-  "topConfig": {},
+  "topConfig": {
+    "longName": "xPack Build Box",
+    "shortName": "xbb"
+  },
   "engines": {
     "node": " >=18.0.0"
   }
