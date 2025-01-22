@@ -60,6 +60,12 @@
     "typescript": "~5.6.3",
     "del-cli": "^6.0.0"
   },
+  "$devDependenciesUrls": [
+    "https://www.npmjs.com/package/del-cli",
+    "https://www.npmjs.com/package/json",
+    "https://www.npmjs.com/package/liquidjs",
+    "https://www.npmjs.com/package/typescript"
+  ],
   "browserslist": {
     "production": [
       ">0.5%",
