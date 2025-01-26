@@ -8,7 +8,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import util from 'node:util';
 
 
-import {redirects} from './docusaurus-config-redirects'
+import {redirects} from './docusaurus-config-redirects';
 
 // The node.js modules cannot be used in modules imported in browser code:
 // webpack < 5 used to include polyfills for node.js core modules by default.
