@@ -3,12 +3,11 @@
 
 # The xPack Build Box
 
-The environment used to build the xPack Binary Development Tools
+The environment used to build the xPack Binary Development Tools.
 
 ## Project documentation
 
-For information on how to use this project,
-please refer to the
+For information on how to use this project, please refer to the
 [project web site](https://xpack-dev-tools.github.io/xpack-build-box/).
 
 ## Project source
