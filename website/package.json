@@ -1,9 +1,10 @@
 {
+  "DO NOT EDIT": "Automatically generated from docusaurus-template-liquid/templates/docusaurus",
   "name": "website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --xpack",
+    "generate-website-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh --xpack-dev-tools",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -57,8 +58,9 @@
     "json": "^11.0.0",
     "typedoc": "^0.27.5",
     "typedoc-plugin-markdown": "^4.3.2",
-    "typescript": "~5.6.3",
-    "del-cli": "^6.0.0"
+    "typescript": "~5.2.2",
+    "del-cli": "^6.0.0",
+    "liquidjs": "^10.20.1"
   },
   "$devDependenciesUrls": [
     "https://www.npmjs.com/package/del-cli",
@@ -90,6 +92,10 @@
     "hasCustomHomepageFeatures": "true",
     "skipInstallCommand": "true",
     "skipContributorGuide": "true",
+    "hasCustomGettingStarted": "true",
+    "customGettingStartedTitle": "Getting Started with the xPack Build Box",
+    "hasCustomUser": "true",
+    "hasCustomInstall": "true",
     "hasCustomUserSidebar": "true",
     "hasCustomMaintainer": "true"
   }

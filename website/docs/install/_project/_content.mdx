@@ -1,0 +1,28 @@
+
+import CodeBlock from '@theme/CodeBlock';
+import customField from '@site/src/libs/customField';
+
+{/* ------------------------------------------------------------------------ */}
+
+The production XBB consists of multiple Docker images,
+for x64 and arm.
+
+The images are published on
+[Docker Hub](https://hub.docker.com/repository/docker/ilegeul/ubuntu)
+(pulling can be done anonymously, pushing requires login).
+
+x64 image:
+
+<ul>
+<li><code>ilegeul/ubuntu:amd64-18.04-xbb-v{customField('releaseVersion')}</code></li>
+</ul>
+
+arm images:
+
+<ul>
+<li><code>ilegeul/ubuntu:arm64v8-18.04-xbb-v{customField('releaseVersion')}</code></li>
+<li><code>ilegeul/ubuntu:arm32v7-18.04-xbb-v{customField('releaseVersion')}</code></li>
+</ul>
+
+Typically, manual installation is unnecessary as `docker`
+will automatically install them upon first use.
