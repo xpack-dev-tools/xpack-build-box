@@ -41,11 +41,9 @@ p.hero__code code  {
   color: var(--ifm-font-color-base)
 }
 
-
 p.hero__subtitle {
   margin: 0 0 0 0; /* 0 0 var(--ifm-paragraph-margin-bottom) */
 }
-
 
 hr.hero__hr {
   /* background-color: var(--ifm-color-primary); */
