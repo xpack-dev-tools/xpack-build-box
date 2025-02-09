@@ -1,0 +1,14 @@
+
+FROM ilegeul/debian:arm64v8-10-node-v20.18.2
+
+LABEL description="Debian 10 arm64v8 image, with the XBB."
+LABEL maintainer="Liviu Ionescu <ilg@livius.net>"
+LABEL repository="https://github.com/xpack-dev-tools/xpack-build-box.git"
+LABEL docs="https://github.com/xpack-dev-tools/xpack-build-box/tree/master/debian/10-xbb/README.md"
+
+ENV TZ=UTC
+
+ADD input-debian-10-arm64v8 /input
+RUN bash /input/build-v6.0.0.sh
+
+CMD ["/bin/bash"]
