@@ -43,7 +43,7 @@ case "${uname_arch}" in
 esac
 
 debian_version="10"
-node_version="20.18.0"
+node_version="20.18.2"
 
 cd "${script_folder_path}"
 
