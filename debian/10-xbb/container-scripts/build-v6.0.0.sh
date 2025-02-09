@@ -131,15 +131,15 @@ zlib1g-dev
 if is_intel
 then
   run_verbose apt-get install --yes \
-    linux-headers-4.19.0-20-all-amd64
+    linux-headers-4.19.0-27-all-amd64
 elif is_aarch64
 then
   run_verbose apt-get install --yes \
-    linux-headers-4.19.0-20-all-arm64
+    linux-headers-4.19.0-27-all-arm64
 elif is_arm32
 then
   run_verbose apt-get install --yes \
-    linux-headers-4.19.0-20-all-armhf
+    linux-headers-4.19.0-27-all-armhf
 fi
 
 if is_intel
