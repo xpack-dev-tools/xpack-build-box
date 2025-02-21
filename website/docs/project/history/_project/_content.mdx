@@ -1,16 +1,26 @@
 
 {/* ------------------------------------------------------------------------ */}
 
-The project was initiated in **January 2018** to address the need for a build environment capable of integrating `arm-none-eabi-gcc` into **GNU ARM Eclipse**.
+The project was initiated in **January 2018** to address the need for a development environment capable of building `arm-none-eabi-gcc` in order to integrate it into the **GNU ARM Eclipse** plug-ins.
 
+Previously, building binaries was necessary for **openocd** (2014), **qemu** (2015), and the RISC-V toolchain (2017).
 
-The initial release, version **1**, drew inspiration from
-[Holy Build Box](https://phusion.github.io/holy-build-box/). It utilised
-CentOS 6 Docker images for GNU/Linux and Homebrew for macOS
+The initial XBB release, version **1**, drew inspiration from
+[Holy Build Box](https://phusion.github.io/holy-build-box/).
+
+This initial (naive) approach used a Mac Mini for all builds; the macOS binaries were built with Homebrew and the GNU/Linux binaries were built with CentOS 6 Docker containers.
+Apart the modest performance of the Mac Mini of the time, the main issue was a Docker bug, probably a memory leak in the code that handled the file system, which caused the build to fail after a few hours.
 
 ## March 2019
 
-In March 2019, version **2** was released, incorporating a major rework
+In March 2019, version **2** was released, incorporating a major rework.
+
+In June 2019, a dedicated Intel NUC NUC8i7BEH was installed to build the x64 GNU/Linux and Windows binaries.
+
+![NUC](/img/2019/nuc8.jpg)
+
+The macOS binaries were built on an old Mac Book Pro 2011, running
+macOS 10.13. It was used until the GPU died in 2022.
 
 ## January 2020
 
@@ -18,6 +28,41 @@ In January 2020, version **3** introduced an upgrade to Ubuntu 12
 for x64 and Ubuntu 16 for Arm.
 
 The build process was divided into two steps, starting with a bootstrap phase that included essential tools required to build the final tools.
+
+The first machine used to build the Arm binaries was a Radxa
+[ROCK 4A](https://radxa.com/products/rock4/). It was preferred
+over the Raspberry Pi because it advertised more cores and support for
+NVMe SSD. Unfortunately, the performance was disappointing, and the
+quality of the operating system was not up to the task.
+
+![ROCK 4A](/img/2020/rock-pi.jpg)
+
+## September 2021
+
+The NUC was a nice machine, but it was definitely not designed to be used for multiple hours continuous runs, as required by the toolchain builds. The fan started to creak and finally failed.
+
+After some research it was decided that the case is thermally inadequate for the task a large heat sink was fitted to the CPU, with a Noctua fan on top.
+
+![NUC with Heat Sink](/img/2021/nuc-heat-sink.jpg)
+
+This solved the thermal issues for good, and the machine was able to run continuously at full speed without throttling down.
+
+## August 2022
+
+In August 2022, the ROCK 4A was replaced with a pair of Raspberry Pi 4 machines,
+one with 4 GB running the 32-bit variant of the Raspbian OS, and one with 8 GB
+running the 64-bit variant of the Raspbian OS.
+
+An early picture during the experimental phase:
+
+![Raspberry Pi](/img/2022/rpis.jpg)
+
+Also in August 2022, after the MacBook Pro died, a new machine was added to the build farm, a Gigabyte
+B550M DS3H motherboard with AMD Ryzen 5 5600G and 32 GB of RAM.
+
+![Gigabyte](/img/2022/gigabyte.jpg)
+
+This also freed the NUC, and allowed to install a [Nucintosh](https://github.com/zearp/Nucintosh) macOS 10.14, to take over the jobs of the defunct MacBook Pro.
 
 ## January 2023
 
@@ -35,6 +80,19 @@ The v5.0.0 release represents a **major milestone**
 for the xPack project, since it is the **first self-sustained** release,
 which allows to build new binary xPacks using previous xPacks,
 without requiring any custom Docker images, or other compiled tools.
+
+## September 2023
+
+In September 2023, the Raspberry Pi machines were equipped with heat sinks and Noctua fans, to ensure
+they never throttle back even under very heavy loads, and were installed in a custom made rack:
+
+![Raspberry Pi 4](/img/2023/rpis.jpg)
+
+Both were upgraded with 500 GB T7 Samsung USB SSDs.
+
+At the same time the NUC used for the x64 macOS builds was installed in the same rack:
+
+![NUC in rack](/img/2023/nuc-in-rack.jpg)
 
 ## The foreseeable future
 
