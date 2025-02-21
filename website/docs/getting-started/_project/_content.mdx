@@ -32,6 +32,14 @@ On macOS, the builds are conducted on standard systems without the need for cust
 
 The `xpack-build-box` project is fully functional and stable.
 
+## End of support for Linux distributions
+
+To help decide what base version to use, and how long to keep support for it,
+a list of main Linux distributions was compiled, with the GLIBC versions:
+
+- [end of support](/docs/end-of-support/)
+
+
 ## Compatibility notices
 
 According to [SemVer](https://semver.org) rules:
@@ -50,6 +58,11 @@ for macOS.
 The v5.0.0 is the first self-sustained release,
 which allows to build new binary xpm packages using previous package releases,
 without requiring any custom Docker images, or other compiled tools
+
+### v6.0.0
+
+The v6.0.0 release upgrades the base version to GLIBC 2.28 and macOS 11.0.
+It also discontinues support for Arm 32-bit.
 
 <License />
 

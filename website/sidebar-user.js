@@ -6,11 +6,12 @@ export const userSidebarCategory = {
         type: 'doc',
         id: 'user/index',
     },
+    collapsed: false,
     items: [
         {
             type: 'doc',
-            id: 'user/index',
-            label: 'TODO'
+            id: 'end-of-support/index',
+            label: 'End-of-Support Schedule'
         }
     ]
 }

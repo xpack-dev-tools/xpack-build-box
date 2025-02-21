@@ -1,14 +1,14 @@
 ---
 
-title: xPack Build Box v5.1.1 released
-seo_title: Version 5.1.1 released
-description: Version 5.1.1 is a new minor release of xPack Build Box.
+title: xPack Build Box v5.2.2 released
+seo_title: Version 5.2.2 released
+description: Version 5.2,2 is a new minor release of xPack Build Box.
 keywords:
   - xpack
   - xbb
   - release
 
-date: 2023-09-11 14:15:00 +0200
+date: 2024-08-01 14:15:00 +0200
 
 authors: ilg-ul
 
@@ -18,7 +18,7 @@ tags:
 
 # ----- Custom properties -----------------------------------------------------
 
-version: 5.1.1
+version: 5.2.2
 
 ---
 
@@ -28,7 +28,9 @@ import CodeBlock from '@theme/CodeBlock';
 
 {/* ------------------------------------------------------------------------ */}
 
-Version **5.1.1** is a new minor release; it upgrades Python to 3.11.4 and adds C++ support.
+# xPack Build Box v5.2.2 released
+
+Version **5.2.2** is a new minor release; it upgrades Python to 3.11.4 and adds C++ support.
 
 <!-- truncate -->
 
@@ -36,7 +38,7 @@ Version **5.1.1** is a new minor release; it upgrades Python to 3.11.4 and adds 
 
 The xPack Build Box (XBB) is a build environment intended for reproducible builds.
 
-Version 5.1.1 is a new release in the 5.x **self-sustained** family,
+Version 5.2.2 is a new release in the 5.x **self-sustained** family,
 which allows to build new binary xPacks using previous xPacks,
 and does not require any custom Docker images, or other compiled tools.
 
@@ -49,7 +51,7 @@ wide range of available binary xPacks.
 
 ## Supported platforms
 
-XBB v5.1.1 supports building binaries for the following platforms:
+XBB v5.5.5 supports building binaries for the following platforms:
 
 - x64 GNU/Linux
 - arm64/arm GNU/Linux
@@ -99,7 +101,7 @@ Intel GNU/Linux:
 ```console
 $ docker images
 REPOSITORY            TAG                         IMAGE ID       CREATED         SIZE
-ilegeul/ubuntu        amd64-18.04-xbb-v5.1.1      19690b6c1041   3 minutes ago   1.21GB
+ilegeul/ubuntu        amd64-18.04-xbb-v5.2.2      8e85dcfabc52   6 months ago    1.21GB
 ```
 
 The images were created on a Debian 10
@@ -111,9 +113,9 @@ Arm GNU/Linux:
 - `ilegeul/ubuntu:arm32v7-18.04-xbb-v5.1.1`
 
 ```console
-REPOSITORY            TAG                           IMAGE ID       CREATED         SIZE
-ilegeul/ubuntu        arm64v8-18.04-xbb-v5.1.1      29d8d82a475d   4 hours ago     1.19GB
-ilegeul/ubuntu        arm32v7-18.04-xbb-v5.1.1      6c31512719d1   3 hours ago     892MB
+REPOSITORY            TAG                         IMAGE ID       CREATED         SIZE
+ilegeul/ubuntu        arm32v7-18.04-xbb-v5.2.2    c57cad6360bb   6 months ago    889MB
+ilegeul/ubuntu        arm64v8-18.04-xbb-v5.2.2    f7181afc00c2   6 months ago    1.19GB
 ```
 
 The arm64v8 image was created on a Raspberry Pi4 OS 64-bit running on a RPi4

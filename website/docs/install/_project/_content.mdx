@@ -1,26 +1,129 @@
 
 import CodeBlock from '@theme/CodeBlock';
 import customField from '@site/src/libs/customField';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Heading from '@theme/Heading';
 
 {/* ------------------------------------------------------------------------ */}
 
+The build scripts run on **GNU/Linux** and **macOS**.
+
+The Windows binaries are generated on x64 GNU/Linux, using
+[mingw-w64](https://mingw-w64.org/).
+
+<Tabs groupId="operating-systems">
+
+<TabItem value="linux" label="GNU/Linux">
+
+### Host system
+
+Since the actual builds run inside Docker containers, the distribution or release of GNU/Linux used on the host system is irrelevant.
+
+### Docker images
+
 The production XBB comprises multiple Docker images for x64 and Arm.
 
-These images are published on [Docker Hub](https://hub.docker.com/repository/docker/ilegeul/ubuntu);
+These images are published on [Docker Hub](https://hub.docker.com/r/ilegeul/debian);
 pulling can be done anonymously, while pushing requires login.
 
-x64 image:
+To download/test the x64 GNU/Linux:
 
-<ul>
-<li><code>ilegeul/ubuntu:amd64-18.04-xbb-v{customField('releaseVersion')}</code></li>
-</ul>
+<CodeBlock language="sh"> {
+`docker run --interactive --tty ilegeul/debian:amd64-10-xbb-v${customField('releaseVersion')}
+`} </CodeBlock>
 
-arm images:
+To download/test the arm64 GNU/Linux:
 
-<ul>
-<li><code>ilegeul/ubuntu:arm64v8-18.04-xbb-v{customField('releaseVersion')}</code></li>
-<li><code>ilegeul/ubuntu:arm32v7-18.04-xbb-v{customField('releaseVersion')}</code></li>
-</ul>
+<CodeBlock language="sh"> {
+`docker run --interactive --tty ilegeul/debian:arm64v8-10-xbb-v${customField('releaseVersion')}
+`} </CodeBlock>
 
 Typically, manual installation is unnecessary as `docker`
 will automatically install them upon first use.
+
+</TabItem>
+
+<TabItem value="macos" label="macOS">
+
+When running on macOS, the build scripts cannot use Docker,
+since there
+are no macOS native Docker images; instead,
+a standard system and the Command Line Tools are required.
+
+### Command Line Tools
+
+As usual with macOS, the compiler and other development tools are not
+packed in the base system and need to be installed separately as part of the
+**Command Line Tools** package, available from
+[Apple](https://developer.apple.com).
+
+To install it, use:
+
+```sh
+xcode-select --install
+```
+
+To check the installed version, use:
+
+```sh
+pkgutil --pkg-info=com.apple.pkg.CLTools_Executables
+```
+
+The XBB binaries expect the CLT binary tools to be present in a
+fixed location, which is:
+
+- `/Library/Developer/CommandLineTools/usr/bin`
+
+### tree
+
+macOS does not provide a `tree` command.
+
+The build scripts do not mandate this command; however,
+for development environments, it is advisable to compile
+one from sources.
+
+- https://gitlab.com/OldManProgrammer/unix-tree.git
+
+```
+mkdir ~/Work/tree
+cd ~/Work/tree
+git clone https://gitlab.com/OldManProgrammer/unix-tree.git
+
+cd unix-tree
+sed -i.bak -e "s|^PREFIX=/usr/local|PREFIX=${HOME}/.local|" Makefile
+
+make install
+
+sudo ln -s ~/.local/bin/tree /usr/local/bin/tree
+```
+
+### Python
+
+To ensure consistency with the GNU/Linux Docker images,
+the same Python version must be installed manually.
+
+### Avoid HomeBrew or MacPorts
+
+In the absence of a Docker-like solution to ensure an isolated environment,
+it is imperative to maintain a clean system and avoid installing packages
+that might interfere with the build scripts.
+
+Specifically, **avoid** using **Homebrew** or **MacPorts** for package
+installation.
+
+Additionally, inspect the `PATH` and remove any references to non-standard
+directories.
+
+Thoroughly check the `/usr/local/bin` and `/usr/local/sbin` directories,
+and preferably remove any binaries that may interfere with the builds.
+
+</TabItem>
+
+</Tabs>
+
+### Build Prerequisites
+
+The full details of installing the prerequisites for building xPack
+Binary Development Tools are available in the
+[Build Prerequisites](https://xpack-dev-tools.github.io/docs/developer/install/prerequisites/) page.

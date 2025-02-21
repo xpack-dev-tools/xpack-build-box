@@ -1,6 +1,6 @@
 {
   "name": "xpack-build-box",
-  "version": "5.2.1",
+  "version": "6.0.0",
   "description": "XBB - The xPack Build Box",
   "main": "",
   "scripts": {

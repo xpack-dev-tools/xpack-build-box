@@ -1,14 +1,16 @@
 
+import CodeBlock from '@theme/CodeBlock';
+import customField from '@site/src/libs/customField';
+
 {/* ------------------------------------------------------------------------ */}
 
 ## Supported platforms
 
-Generally, xPack binaries are available for the following platforms:
+Generally, xpm binaries packages are available for the following platforms:
 
 - x64 Windows
 - x64 GNU/Linux
 - aarch64 GNU/Linux
-- arm GNU/Linux
 - x64 macOS
 - arm64 macOS (Apple Silicon)
 
@@ -16,7 +18,8 @@ Generally, xPack binaries are available for the following platforms:
 
 Starting with 2022, support for
 macOS Apple Silicon was added; 32-bit support for Windows and
-GNU/Linux Intel was discontinued.
+x64 GNU/Linux was discontinued. In 2025 support for arm 32-bit
+was also discontinued.
 
 :::
 
@@ -27,12 +30,13 @@ For the detailed supported versions, please check the specific
 
 ### GNU/Linux Arm binaries
 
-Support for Arm binaries was added in v3.1, in early 2020.
+Support for `arm64v8` & `arm32v7` binaries was added in v3.1, in early 2020.
+
+Beginning with version 6.0.0 in 2025, support for `arm32v7` was discontinued.
 
 The supported architectures are:
 
-- `arm64v8` - the ARMv8 64-bit architecture Aarch64
-- `arm32v7` - the ARMv7 32-bit architecture with hardware float (armhf)
+- `arm64v8` - the ARMv8 64-bit architecture aarch64
 
 ### macOS Apple Silicon
 
@@ -46,13 +50,14 @@ containers, which start afresh each time they are instantiated.
 To pass the folder with the build scripts in and the results out,
 it is usual to use a `Work` folder, for example:
 
-```console
-$ docker run -it --volume "${HOME}/Work:/Host/Work" ilegeul/ubuntu:amd64-18.04-xbb-v5.0.0
+<CodeBlock language="console"> {
+`$ docker run -it --volume "\${HOME}/Work:/Host/Work" ilegeul/debian:amd64-10-xbb-v${customField('releaseVersion')}
 root@bc7071f2c78a:/# ls -l Host/Work/xpacks
 total 8
 drwxrwxr-x 11 node node 4096 Mar 24 15:39 openocd-xpack.git
 drwxrwxr-x 17 node node 4096 Mar 27 14:15 xbb-helper-xpack.git
-```
+`} </CodeBlock>
+
 
 In this simple configuration, the builds run with root permissions; with
 more elaborate configurations it is possible to start the Docker containers
@@ -62,9 +67,9 @@ with user rights, but they are beyond the scope of this document.
 
 For convenience, the new build scripts are xPacks, with
 multiple build configurations, for all supported platforms,
-and all actions are defined uniformly as **xPack actions**.
+and all actions are defined uniformly as **xpm actions**.
 
-xPack actions are named sequences of shell commands, that are executed
+xpm actions are named sequences of shell commands, that are executed
 in order when the action is invoked.
 
 For example:
@@ -102,11 +107,11 @@ Since there are lots of common files between projects, they were collected
 into a helper project.
 
 The helper project is a
-source xPack (`@xpack-dev-tools/xbb-helper`), which can be installed
+source xpm package (`@xpack-dev-tools/xbb-helper`), which can be installed
 as a dependency with:
 
 ```sh
-cd ~/Work/xpacks/<project>-xpack.git
+cd my-project-xpack.git
 xpm install --save-dev @xpack-dev-tools/xbb-helper@latest
 ```
 
@@ -141,15 +146,14 @@ directly include files from the `scripts` and `dependencies` folders.
 
 ## Types of builds
 
-From the point of view of the desired result, there are two types of builds:
+From the perspective of the desired outcome, there are two types of builds:
 
-- local/native builds, intended for development and running on the local
-  machine
-- distribution builds, intended for xPack binary distributions and running
-  on most modern machines
+- Local/native builds, intended for development and execution on the local machine
+- Distribution builds, designed for xPack binary distributions and operation on production machines
 
-The main use cases of XBBs are distribution builds, but they can be used
-for native builds as well.
+Ideally, the production machines should be CI/CD runners, such as GitHub. However, some builds, like toolchains, take too long and exceed the time limits. In these cases, separate machines running self-hosted runners should be utilised.
+
+The primary use case for XBB is distribution builds, but it can also be used for native builds.
 
 ### Native builds with all tools from the host machine
 
@@ -176,17 +180,17 @@ xpm run install
 xpm run build-native-win
 ```
 
-### Native builds with the major tools coming from xPacks
+### Native builds with the major tools coming from xpm packages
 
 Sometimes the native tools available on the host machine may be too old
 for building modern packages.
 
-A simple solution is to install the main tools as binary xPacks. The
+A simple solution is to install the main tools as binary xpm packages. The
 selection of tools depends on the target platform.
 
 The existing projects include separate build configurations for
 multiple platforms (darwin-x64, darwin-arm64, linux-x64, linux-arm64,
-linux-arm, win32-x64).
+win32-x64).
 
 For example, to build the Intel GNU/Linux binaries, use:
 
@@ -196,7 +200,7 @@ xpm run install --config linux-x64
 xpm run build --config linux-x64
 ```
 
-### Docker builds with tools coming from xPacks
+### Docker builds with tools coming from xpm packages
 
 An even more reproducible configuration can be achieved by using
 Docker containers, with the base system tools.
@@ -209,11 +213,11 @@ xpm run docker-build --config linux-x64
 
 ### Writable helper scripts
 
-For normal builds, the helper project, which is a source xPack,
+For normal builds, the helper project, which is a source xpm packages,
 is downloaded and marked as read-only, to prevent damaging it.
 
 For development purposes it might be necessary to update it; the
-xPack solution (inspired by the npm solution) is to download the
+xpm solution (inspired by the npm solution) is to download the
 helper repository into a separate location, and link it to the
 current project.
 
@@ -248,13 +252,13 @@ In the second step, a link from the build project to the central store
 is created.
 
 ```sh
-xpm link @xpack-dev-tools/xbb-helper -C ~/Work/xpacks/<project>-xpack.git
+xpm link @xpack-dev-tools/xbb-helper -C my-project-xpack.git
 ```
 
 The result is a link like:
 
 ```console
-$ cd ~/Work/xpacks/<project>-xpack.git
+$ cd my-project-xpack.git
 $ ls -l xpacks/
 total 0
 lrwxrwxrwx 1 ilg ilg 57 Mar 27 17:21 xpack-dev-tools-xbb-helper -> /home/ilg/.local/xPacks/@xpack-dev-tools/xbb-helper/.link
@@ -274,7 +278,7 @@ build projects.
 ## How to use the XBB tools
 
 Both on GNU/Linux and macOS, the XBB tools are installed as binary
-xPack dependencies in `xpacks/.bin` and are fully distinct from
+xpm development dependencies in `xpacks/.bin` and are fully distinct from
 the system tools.
 
 To access them, the application should update the `PATH` to prefer
@@ -304,14 +308,6 @@ and the response on the stderr stream.
 
 This script is not specific to XBB, and can be used with any build.
 
-For this, copy the file into `.../xbb/bin` or any other folder present
-in the PATH and pass the script name via the environment.
-
-```sh
-chmod +x /opt/xbb/bin/pkg-config-verbose
-export PKG_CONFIG=pkg-config-verbose
-```
-
 ## No more TeX
 
 Starting with v3.4, support for building the manuals was dropped,
@@ -323,17 +319,3 @@ To help decide what base version to use, and how long to keep support for it,
 a list of main Linux distributions was compiled, with the GLIBC versions:
 
 - [end of support](../end-of-support/)
-
-## Upgrade plans
-
-RedHat maintenance support 1 for RHEL 7 ended in Aug. 2020, with
-maintenance support 2 to last until June. 2024. However XBB support
-for RHEL 7 is a tough requirement, and was discontinued starting with 2022.
-
-Compatibility was moved up to
-**Ubuntu 18 LTS** (**GLIBC 2.27**), which also provides compatibility with
-RedHat 8 / Debian 10, which both use GLIBC 2.28.
-
-The next upgrade step will be taken when the minimum Node.js becomes 18.x,
-which requires GLIBC 2.28, when the base system will be
-**Debian 10** (planned for mid-2024).

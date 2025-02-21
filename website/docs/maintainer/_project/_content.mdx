@@ -45,7 +45,7 @@ git -C ~/Work/xpack-build-box.git pull
 
 TeX support was removed.
 
-TeX 2019 failed on AArch64 with a CRC error.
+TeX 2019 failed on aarch64 with a CRC error.
 
 TeX 2020 and 2021 failed with:
 
@@ -112,14 +112,15 @@ Fixed
 
 ## Current status
 
-XBB v5.0.0 and up are more modular, using binary xPacks.
+XBB v5.0.0 and up are more modular, using binary xpm packages.
 
 ### GNU/Linux
 
-There will be 3 Docker images (no i386) with Ubuntu 18.04 LTS,
+There are two Docker images (x64 and arm64) with Debian 10,
 basic development tools and node/npm.
 
-The toolchains and other tools will be installed as binary xPacks.
+The toolchains and other tools are installed as binary xpm development
+dependencies.
 
 - https://xpack-dev-tools.github.com/
 
@@ -127,11 +128,16 @@ The toolchains and other tools will be installed as binary xPacks.
 
 For macOS the only prerequisite is the Command Line Tools (CLT) package.
 
-`realpath` is provided as a separate binary xPack.
+`realpath` is provided as a separate binary xpm package.
+
+`tree` is compiled from sources; in the future it should be a separate
+xpm package.
 
 ## Future work
 
-When node 18.x will be needed, the base system must be upgraded to
-GLIBC 2.28, which is available since Debian 10.
+The current Debian 10 base is expected to last 1-2 years.
 
-The scripts to create Debian 10 Docker images are already added.
+The next major moment might be 2027, when RedHat 9 will enter extended support.
+
+The next probable upgrade will be to Debian 11; however, the date for this
+upgrade remains to be decided.

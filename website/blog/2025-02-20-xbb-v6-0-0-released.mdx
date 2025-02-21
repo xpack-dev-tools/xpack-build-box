@@ -1,14 +1,14 @@
 ---
 
-title: xPack Build Box v{{releaseVersion}} released
-seo_tile: Version {{releaseVersion}} released
-description: Version v{{releaseVersion}} is a TODO new/maintenance release
+title: xPack Build Box v6.0.0 released
+seo_tile: Version 6.0.0 released
+description: Version v6.0.0 is a new release
 keywords:
   - xpack
   - xbb
   - release
 
-date: {{releaseDate}}
+date: 2025-02-20 19:06:59 +0200
 
 authors: ilg-ul
 
@@ -18,7 +18,7 @@ tags:
 
 # ----- Custom properties -----------------------------------------------------
 
-version: "{{releaseVersion}}"
+version: "6.0.0"
 
 ---
 
@@ -27,11 +27,8 @@ import Image from '@theme/IdealImage';
 import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link';
 
-TODO: select one summary
 
-Version **{{releaseVersion}}** is a maintenance release; it fixes ...
-
-Version **{{releaseVersion}}** is a new release; it adds ....
+Version **6.0.0** is a new release; it updates to GLIBC **2.28** and macOS **11.0**.
 
 <!-- truncate -->
 
@@ -40,7 +37,7 @@ Version **{{releaseVersion}}** is a new release; it adds ....
 The [xPack Build Box](https://xpack-dev-tools.github.io/xpack-build-box/)
 project is a build environment intended for reproducible builds.
 
-Version {{releaseVersion}} is a new release in the XBB **self-sustained** family,
+Version 6.0.0 is a new release in the XBB **self-sustained** family,
 which allows to build new binary xPacks using previous binary xPacks,
 and does not require any custom Docker images, or other compiled tools.
 
@@ -53,7 +50,7 @@ extensive range of available binary xPacks
 
 ## Supported platforms
 
-XBB v{{releaseVersion}} supports building binaries for the following platforms:
+XBB v6.0.0 supports building binaries for the following platforms:
 
 - x64,arm64 GNU/Linux
 - x64,arm64 macOS
@@ -94,7 +91,7 @@ The images are published on
 [Docker Hub](https://hub.docker.com/r/ilegeul/debian)
 (pulling can be done anonymously, pushing requires login).
 
-x64 GNU/Linux:
+Intel GNU/Linux:
 
 - `ilegeul/debian:amd64-10-xbb-v6.0.0`
 
@@ -107,7 +104,7 @@ ilegeul/debian   amd64-10-xbb-v6.0.0        c111c2168dfb   11 days ago     1.84G
 The images were created on a Debian 11
 running on an GIGABYTE B550M DS3H with AMD Ryzen 5 5600G.
 
-arm64 GNU/Linux:
+Arm GNU/Linux:
 
 - `ilegeul/debian:arm64v8-10-xbb-v6.0.0`
 
@@ -116,7 +113,7 @@ REPOSITORY       TAG                        IMAGE ID       CREATED         SIZE
 ilegeul/debian   arm64v8-10-xbb-v6.0.0      29f3662d95ad   11 days ago     1.77GB
 ```
 
-The arm64v8 image was created on Ubuntu running on an Oracle **ampere**
+The arm64v8 image was created on an Ubuntu running on an Oracle **ampere**
 machine.
 
 ## macOS
