@@ -84,7 +84,7 @@
     "node": ">=18.0"
   },
   "websiteConfig": {
-    "longName": "xPack Build Box",
+    "descriptiveName": "xPack Build Box",
     "title": "XBB - The xPack Build Box",
     "tagline": "The environment used to build the xPack Binary Development Tools",
     "metadataDescription": "The environment used to build the xPack Binary Development Tools",
