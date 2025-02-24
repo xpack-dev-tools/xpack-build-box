@@ -43,8 +43,8 @@
   },
   "bundleDependencies": [],
   "topConfig": {
-    "longName": "xPack Build Box",
-    "shortName": "xbb"
+    "descriptiveName": "xPack Build Box",
+    "permalinkName": "xbb"
   },
   "engines": {
     "node": " >=18.0.0"
