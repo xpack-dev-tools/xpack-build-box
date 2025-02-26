@@ -1,4 +1,6 @@
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 {/* ------------------------------------------------------------------------ */}
 
 The project was initiated in **January 2018** to address the need for
@@ -29,7 +31,7 @@ In March 2019, version **2** of XBB was released, incorporating a major rework.
 In June 2019, a dedicated Intel NUC **NUC8i7BEH** was installed (`xbbli`) to build
 the x64 GNU/Linux and Windows binaries.
 
-[![NUC](/img/2019/nuc8.jpg)](/img/2019/nuc8.jpg)
+<a href={useBaseUrl('/img/2019/nuc8.jpg')}><img src={useBaseUrl('/img/2019/nuc8.jpg')} /></a>
 
 The macOS binaries were built on an old **MacBook Pro** 2011, running
 macOS 10.13 (`xbbmi`). It was used until 2022, when the GPU died.
@@ -49,7 +51,7 @@ over the Raspberry Pi because it advertised more cores and support for
 NVMe SSD. Unfortunately, the performance was disappointing, and the
 quality of the operating system was not up to the task.
 
-[![ROCK 4A](/img/2020/rock-pi-958.jpg)](/img/2020/rock-pi.jpg)
+<a href={useBaseUrl('/img/2020/rock-pi.jpg')}><img src={useBaseUrl('/img/2020/rock-pi-958.jpg')} /></a>
 
 ### September 2021
 
@@ -62,7 +64,7 @@ inadequate for the task. With some mechanical tweaks,
 a large **heat sink** was fitted to the CPU,
 with a **Noctua fan** on top.
 
-[![NUC with Heat Sink](/img/2021/nuc-heat-sink-958.jpg)](/img/2021/nuc-heat-sink.jpg)
+<a href={useBaseUrl('/img/2021/nuc-heat-sink.jpg')}><img src={useBaseUrl('/img/2021/nuc-heat-sink-958.jpg')} /></a>
 
 This resolved the thermal issues permanently, and the machine was
 able to run continuously at full speed without throttling down.
@@ -82,13 +84,13 @@ and one with 4 GB running the 32-bit variant of the Raspbian OS (`xbbla32`).
 
 An early picture during the experimental phase:
 
-[![Raspberry Pi](/img/2022/rpis-958.jpg)](/img/2022/rpis.jpg)
+<a href={useBaseUrl('/img/2022/rpis.jpg')}><img src={useBaseUrl('/img/2022/rpis-958.jpg')} /></a>
 
 Also in August 2022, after the MacBook Pro died, a new machine was added
 to the build farm: a **Gigabyte
 B550M DS3H** motherboard with an **AMD Ryzen 5 5600G** and 32 GB of RAM (`xbbli`).
 
-[![Gigabyte](/img/2022/gigabyte-958.jpg)](/img/2022/gigabyte.jpg)
+<a href={useBaseUrl('/img/2022/gigabyte.jpg')}><img src={useBaseUrl('/img/2022/gigabyte-958.jpg')} /></a>
 
 This also freed the NUC, and allowed the installation of a
 [Nucintosh](https://github.com/zearp/Nucintosh) running macOS 10.14, to
@@ -121,14 +123,14 @@ sinks** and **Noctua fans**, to ensure
 they never throttle back even under very heavy loads, and were
 installed in a custom-made rack:
 
-[![Raspberry Pi 4](/img/2023/rpis-958.jpg)](/img/2023/rpis.jpg)
+<a href={useBaseUrl('/img/2023/rpis.jpg')}><img src={useBaseUrl('/img/2023/rpis-958.jpg')} /></a>
 
 Both were upgraded with 500 GB T7 Samsung USB SSDs.
 
 At the same time the NUC used for the x64 macOS builds was installed
 in the same rack:
 
-[![NUC in rack](/img/2023/nuc-in-rack-958.jpg)](/img/2023/nuc-in-rack.jpg)
+<a href={useBaseUrl('/img/2023/nuc-in-rack.jpg')}><img src={useBaseUrl('/img/2023/nuc-in-rack-958.jpg')} /></a>
 
 ### November 2023
 
