@@ -28,13 +28,13 @@ In March 2019, version **2** of XBB was released, incorporating a major rework.
 
 ### June 2019
 
-In June 2019, a dedicated Intel NUC **NUC8i7BEH** was installed (`xbbli`) to build
-the x64 GNU/Linux and Windows binaries.
+In June 2019, a dedicated Intel NUC **NUC8i7BEH** was installed
+(named `xbbli`) to build the x64 GNU/Linux and Windows binaries.
 
 <a href={useBaseUrl('/img/2019/nuc8.jpg')}><img src={useBaseUrl('/img/2019/nuc8.jpg')} /></a>
 
 The macOS binaries were built on an old **MacBook Pro** 2011, running
-macOS 10.13 (`xbbmi`). It was used until 2022, when the GPU died.
+macOS 10.13 (named `xbbmi`). It was used until 2022, when the GPU died.
 
 ### January 2020
 
@@ -46,7 +46,7 @@ bootstrap phase that included essential tools required to build
 the final tools.
 
 The first machine used to build the Arm binaries was a Radxa
-[ROCK 4A](https://radxa.com/products/rock4/) (`xbbla`). It was preferred
+[ROCK 4A](https://radxa.com/products/rock4/) (named `xbbla`). It was preferred
 over the Raspberry Pi because it advertised more cores and support for
 NVMe SSD. Unfortunately, the performance was disappointing, and the
 quality of the operating system was not up to the task.
@@ -72,15 +72,15 @@ able to run continuously at full speed without throttling down.
 ### November 2021
 
 In November 2021, thanks to the generous open source program from **MacStadium**,
-a **Mac Mini M1** (`xbbma`) was added to the build farm to build the arm64 macOS
+a **Mac Mini M1** (named `xbbma`) was added to the build farm to build the arm64 macOS
 binaries.
 
 ### August 2022
 
 In August 2022, the ROCK 4A was replaced with a pair of **Raspberry Pi 4** machines,
 one with 8 GB
-running the 64-bit variant of the Raspbian OS (`xbbla`),
-and one with 4 GB running the 32-bit variant of the Raspbian OS (`xbbla32`).
+running the 64-bit variant of the Raspbian OS (named `xbbla`),
+and one with 4 GB running the 32-bit variant of the Raspbian OS (named `xbbla32`).
 
 An early picture during the experimental phase:
 
@@ -88,13 +88,13 @@ An early picture during the experimental phase:
 
 Also in August 2022, after the MacBook Pro died, a new machine was added
 to the build farm: a **Gigabyte
-B550M DS3H** motherboard with an **AMD Ryzen 5 5600G** and 32 GB of RAM (`xbbli`).
+B550M DS3H** motherboard with an **AMD Ryzen 5 5600G** and 32 GB of RAM (named `xbbli`).
 
 <a href={useBaseUrl('/img/2022/gigabyte.jpg')}><img src={useBaseUrl('/img/2022/gigabyte-958.jpg')} /></a>
 
 This also freed the NUC, and allowed the installation of a
 [Nucintosh](https://github.com/zearp/Nucintosh) running macOS 10.14, to
-take over the tasks of the defunct MacBook Pro (`xbbmi`).
+take over the tasks of the defunct MacBook Pro (named `xbbmi`).
 
 ### January 2023
 
@@ -135,7 +135,7 @@ in the same rack:
 ### November 2023
 
 In November 2023, using the new **Oracle Ampere** virtual servers,
-a new machine was added to the build farm. With 4 cores, 24 GB RAM
+a new machine was added to the build farm (named `ampere`). With 4 cores, 24 GB RAM
 and 200 GB disk, it is many times faster than the Raspberry Pi 4
 machines, and it took over the task of running the development
 builds for the arm64 GNU/Linux binaries.
