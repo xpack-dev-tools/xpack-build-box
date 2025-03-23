@@ -1,7 +1,4 @@
 /*
- * DO NOT EDIT!
- * Automatically generated from docusaurus-template-liquid/templates/docusaurus.
- *
  * This file is part of the xPack project (http://xpack.github.io).
  * Copyright (c) 2024 Liviu Ionescu. All rights reserved.
  *
@@ -9,11 +6,21 @@
  * for any purpose is hereby granted, under the terms of the MIT license.
  *
  * If a copy of the license was not distributed with this file, it can
- * be obtained from https://opensource.org/licenses/MIT.
+ * be obtained from https://opensource.org/licenses/mit.
  */
 
-export default function History32bitDiscontinued({platforms}): JSX.Element {
-    return (
-        <>Support for {platforms} (32-bit) was discontinued</>
-    );
+export const customDocsUserSidebarCategory = {
+    type: 'category',
+    label: 'User\'s Guide',
+    link: {
+        type: 'doc',
+        id: 'user/index',
+    },
+    items: [
+        {
+            type: 'doc',
+            id: 'user/index',
+            label: 'TODO'
+        }
+    ]
 }

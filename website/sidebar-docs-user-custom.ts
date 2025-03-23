@@ -1,5 +1,5 @@
 
-export const userSidebarCategory = {
+export const customDocsUserSidebarCategory = {
     type: 'category',
     label: 'User\'s Guide',
     link: {
