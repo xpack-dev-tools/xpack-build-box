@@ -8,7 +8,7 @@ The environment used to build the xPack Binary Development Tools.
 ## Project documentation
 
 For information on how to use this project, please refer to the
-[project web site](https://xpack-dev-tools.github.io/xpack-build-box/).
+[project website](https://xpack-dev-tools.github.io/xpack-build-box/).
 
 ## Project source
 
@@ -18,6 +18,6 @@ The source code is available on
 ## License
 
 Unless otherwise stated, the original content is released under the terms of the
-[MIT License](https://opensource.org/licenses/mit/),
+[MIT License](https://opensource.org/licenses/MIT),
 with all rights reserved to
 [Liviu Ionescu](https://github.com/ilg-ul).
