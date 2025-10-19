@@ -13,7 +13,7 @@
 function build_native_binutils()
 {
   # https://www.gnu.org/software/binutils/
-  # https://ftp.gnu.org/gnu/binutils/
+  # https://ftpmirror.gnu.org/gnu/binutils/
 
   # https://github.com/archlinux/svntogit-packages/blob/packages/binutils/trunk/PKGBUILD
   # https://archlinuxarm.org/packages/aarch64/binutils/files/PKGBUILD
@@ -44,7 +44,7 @@ function build_native_binutils()
   local native_binutils_src_folder_name="binutils-${native_binutils_version}"
 
   local native_binutils_archive="${native_binutils_src_folder_name}.tar.xz"
-  local native_binutils_url="https://ftp.gnu.org/gnu/binutils/${native_binutils_archive}"
+  local native_binutils_url="https://ftpmirror.gnu.org/gnu/binutils/${native_binutils_archive}"
 
   local native_binutils_folder_name="native-binutils${step}-${native_binutils_version}"
 
@@ -278,7 +278,7 @@ function test_native_binutils()
 function build_native_gdb()
 {
   # https://www.gnu.org/software/gdb/
-  # https://ftp.gnu.org/gnu/gdb/
+  # https://ftpmirror.gnu.org/gnu/gdb/
 
   # https://archlinuxarm.org/packages/aarch64/gdb/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gdb-git
@@ -300,7 +300,7 @@ function build_native_gdb()
   local native_gdb_src_folder_name="gdb-${native_gdb_version}"
 
   local native_gdb_archive="${native_gdb_src_folder_name}.tar.xz"
-  local native_gdb_url="https://ftp.gnu.org/gnu/gdb/${native_gdb_archive}"
+  local native_gdb_url="https://ftpmirror.gnu.org/gnu/gdb/${native_gdb_archive}"
 
   local native_gdb_folder_name="native-gdb${step}-${native_gdb_version}"
 
@@ -442,7 +442,7 @@ function test_native_gdb()
 function build_native_gcc()
 {
   # https://gcc.gnu.org
-  # https://ftp.gnu.org/gnu/gcc/
+  # https://ftpmirror.gnu.org/gnu/gcc/
   # https://gcc.gnu.org/wiki/InstallingGCC
   # https://gcc.gnu.org/install/build.html
 
@@ -505,7 +505,7 @@ function build_native_gcc()
   else
     local native_gcc_src_folder_name="gcc-${native_gcc_version}"
     local native_gcc_archive="${native_gcc_src_folder_name}.tar.xz"
-    local native_gcc_url="https://ftp.gnu.org/gnu/gcc/gcc-${native_gcc_version}/${native_gcc_archive}"
+    local native_gcc_url="https://ftpmirror.gnu.org/gnu/gcc/gcc-${native_gcc_version}/${native_gcc_archive}"
   fi
 
   local native_gcc_folder_name="native-gcc${step}-${native_gcc_version}"
@@ -1050,7 +1050,7 @@ __EOF__
 
 function build_mingw_binutils()
 {
-  # https://ftp.gnu.org/gnu/binutils/
+  # https://ftpmirror.gnu.org/gnu/binutils/
 
   # https://github.com/archlinux/svntogit-community/blob/packages/mingw-w64-binutils/trunk/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=mingw-w64-binutils
@@ -1066,7 +1066,7 @@ function build_mingw_binutils()
   local mingw_binutils_src_folder_name="binutils-${mingw_binutils_version}"
 
   local mingw_binutils_archive="${mingw_binutils_src_folder_name}.tar.xz"
-  local mingw_binutils_url="https://ftp.gnu.org/gnu/binutils/${mingw_binutils_archive}"
+  local mingw_binutils_url="https://ftpmirror.gnu.org/gnu/binutils/${mingw_binutils_archive}"
 
   local mingw_binutils_folder_name="mingw-binutils-${mingw_binutils_version}"
 
@@ -1474,7 +1474,7 @@ function build_mingw_gcc_first()
   # https://github.com/archlinux/svntogit-community/blob/packages/mingw-w64-gcc/trunk/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=mingw-w64-gcc
 
-  # https://ftp.gnu.org/gnu/gcc/
+  # https://ftpmirror.gnu.org/gnu/gcc/
   # 2018-12-06, "7.4.0"
   # 2019-11-14, "7.5.0"
   # 2019-02-22, "8.3.0"
@@ -1488,7 +1488,7 @@ function build_mingw_gcc_first()
   local mingw_gcc_src_folder_name="gcc-${mingw_gcc_version}"
 
   local mingw_gcc_archive="${mingw_gcc_src_folder_name}.tar.xz"
-  local mingw_gcc_url="https://ftp.gnu.org/gnu/gcc/gcc-${mingw_gcc_version}/${mingw_gcc_archive}"
+  local mingw_gcc_url="https://ftpmirror.gnu.org/gnu/gcc/gcc-${mingw_gcc_version}/${mingw_gcc_archive}"
 
   export mingw_gcc_folder_name="mingw-gcc-${mingw_gcc_version}"
 
@@ -2712,7 +2712,7 @@ function test_xz()
 function build_tar()
 {
   # https://www.gnu.org/software/tar/
-  # https://ftp.gnu.org/gnu/tar/
+  # https://ftpmirror.gnu.org/gnu/tar/
 
   # https://archlinuxarm.org/packages/aarch64/tar/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=tar-git
@@ -2732,7 +2732,7 @@ function build_tar()
   else
     local tar_archive="${tar_src_folder_name}.tar.xz"
   fi
-  local tar_url="https://ftp.gnu.org/gnu/tar/${tar_archive}"
+  local tar_url="https://ftpmirror.gnu.org/gnu/tar/${tar_archive}"
 
   local tar_folder_name="${tar_src_folder_name}"
 
@@ -2907,7 +2907,7 @@ function test_tar()
 function build_coreutils()
 {
   # https://www.gnu.org/software/coreutils/
-  # https://ftp.gnu.org/gnu/coreutils/
+  # https://ftpmirror.gnu.org/gnu/coreutils/
 
   # https://archlinuxarm.org/packages/aarch64/coreutils/files/PKGBUILD
 
@@ -2921,7 +2921,7 @@ function build_coreutils()
   local coreutils_src_folder_name="coreutils-${coreutils_version}"
 
   local coreutils_archive="${coreutils_src_folder_name}.tar.xz"
-  local coreutils_url="https://ftp.gnu.org/gnu/coreutils/${coreutils_archive}"
+  local coreutils_url="https://ftpmirror.gnu.org/gnu/coreutils/${coreutils_archive}"
 
   local coreutils_folder_name="${coreutils_src_folder_name}"
 
@@ -3217,7 +3217,7 @@ function test_pkg_config()
 function build_m4()
 {
   # https://www.gnu.org/software/m4/
-  # https://ftp.gnu.org/gnu/m4/
+  # https://ftpmirror.gnu.org/gnu/m4/
 
   # https://archlinuxarm.org/packages/aarch64/m4/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=m4-git
@@ -3232,7 +3232,7 @@ function build_m4()
   local m4_src_folder_name="m4-${m4_version}"
 
   local m4_archive="${m4_src_folder_name}.tar.xz"
-  local m4_url="https://ftp.gnu.org/gnu/m4/${m4_archive}"
+  local m4_url="https://ftpmirror.gnu.org/gnu/m4/${m4_archive}"
 
   local m4_folder_name="${m4_src_folder_name}"
 
@@ -3360,7 +3360,7 @@ function test_m4()
 function build_gawk()
 {
   # https://www.gnu.org/software/gawk/
-  # https://ftp.gnu.org/gnu/gawk/
+  # https://ftpmirror.gnu.org/gnu/gawk/
 
   # https://archlinuxarm.org/packages/aarch64/gawk/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gawk-git
@@ -3376,7 +3376,7 @@ function build_gawk()
   local gawk_src_folder_name="gawk-${gawk_version}"
 
   local gawk_archive="${gawk_src_folder_name}.tar.xz"
-  local gawk_url="https://ftp.gnu.org/gnu/gawk/${gawk_archive}"
+  local gawk_url="https://ftpmirror.gnu.org/gnu/gawk/${gawk_archive}"
 
   local gawk_folder_name="${gawk_src_folder_name}"
 
@@ -3506,7 +3506,7 @@ function test_gawk()
 function build_sed()
 {
   # https://www.gnu.org/software/sed/
-  # https://ftp.gnu.org/gnu/sed/
+  # https://ftpmirror.gnu.org/gnu/sed/
 
   # https://archlinuxarm.org/packages/aarch64/sed/files/PKGBUILD
 
@@ -3518,7 +3518,7 @@ function build_sed()
   local sed_src_folder_name="sed-${sed_version}"
 
   local sed_archive="${sed_src_folder_name}.tar.xz"
-  local sed_url="https://ftp.gnu.org/gnu/sed/${sed_archive}"
+  local sed_url="https://ftpmirror.gnu.org/gnu/sed/${sed_archive}"
 
   local sed_folder_name="${sed_src_folder_name}"
 
@@ -3654,7 +3654,7 @@ function test_sed()
 function build_autoconf()
 {
   # https://www.gnu.org/software/autoconf/
-  # https://ftp.gnu.org/gnu/autoconf/
+  # https://ftpmirror.gnu.org/gnu/autoconf/
 
   # https://archlinuxarm.org/packages/any/autoconf2.13/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=autoconf-git
@@ -3669,7 +3669,7 @@ function build_autoconf()
   local autoconf_src_folder_name="autoconf-${autoconf_version}"
 
   local autoconf_archive="${autoconf_src_folder_name}.tar.xz"
-  local autoconf_url="https://ftp.gnu.org/gnu/autoconf/${autoconf_archive}"
+  local autoconf_url="https://ftpmirror.gnu.org/gnu/autoconf/${autoconf_archive}"
 
   local autoconf_folder_name="${autoconf_src_folder_name}"
 
@@ -3774,7 +3774,7 @@ function test_autoconf()
 function build_automake()
 {
   # https://www.gnu.org/software/automake/
-  # https://ftp.gnu.org/gnu/automake/
+  # https://ftpmirror.gnu.org/gnu/automake/
 
   # https://archlinuxarm.org/packages/any/automake/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=automake-git
@@ -3791,7 +3791,7 @@ function build_automake()
   local automake_src_folder_name="automake-${automake_version}"
 
   local automake_archive="${automake_src_folder_name}.tar.xz"
-  local automake_url="https://ftp.gnu.org/gnu/automake/${automake_archive}"
+  local automake_url="https://ftpmirror.gnu.org/gnu/automake/${automake_archive}"
 
   local automake_folder_name="${automake_src_folder_name}"
 
@@ -4061,7 +4061,7 @@ function test_libtool()
 function build_gettext()
 {
   # https://www.gnu.org/software/gettext/
-  # https://ftp.gnu.org/gnu/gettext/
+  # https://ftpmirror.gnu.org/gnu/gettext/
 
   # https://archlinuxarm.org/packages/aarch64/gettext/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gettext-git
@@ -4075,7 +4075,7 @@ function build_gettext()
   local gettext_src_folder_name="gettext-${gettext_version}"
 
   local gettext_archive="${gettext_src_folder_name}.tar.xz"
-  local gettext_url="https://ftp.gnu.org/gnu/gettext/${gettext_archive}"
+  local gettext_url="https://ftpmirror.gnu.org/gnu/gettext/${gettext_archive}"
 
   local gettext_folder_name="${gettext_src_folder_name}"
 
@@ -4290,7 +4290,7 @@ function test_gettext()
 function build_patch()
 {
   # https://www.gnu.org/software/patch/
-  # https://ftp.gnu.org/gnu/patch/
+  # https://ftpmirror.gnu.org/gnu/patch/
 
   # https://archlinuxarm.org/packages/aarch64/patch/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=patch-git
@@ -4303,7 +4303,7 @@ function build_patch()
   local patch_src_folder_name="patch-${patch_version}"
 
   local patch_archive="${patch_src_folder_name}.tar.xz"
-  local patch_url="https://ftp.gnu.org/gnu/patch/${patch_archive}"
+  local patch_url="https://ftpmirror.gnu.org/gnu/patch/${patch_archive}"
 
   local patch_folder_name="${patch_src_folder_name}"
 
@@ -4407,7 +4407,7 @@ function test_patch()
 function build_diffutils()
 {
   # https://www.gnu.org/software/diffutils/
-  # https://ftp.gnu.org/gnu/diffutils/
+  # https://ftpmirror.gnu.org/gnu/diffutils/
 
   # https://archlinuxarm.org/packages/aarch64/diffutils/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=diffutils-git
@@ -4421,7 +4421,7 @@ function build_diffutils()
   local diffutils_src_folder_name="diffutils-${diffutils_version}"
 
   local diffutils_archive="${diffutils_src_folder_name}.tar.xz"
-  local diffutils_url="https://ftp.gnu.org/gnu/diffutils/${diffutils_archive}"
+  local diffutils_url="https://ftpmirror.gnu.org/gnu/diffutils/${diffutils_archive}"
 
   local diffutils_folder_name="${diffutils_src_folder_name}"
 
@@ -4547,7 +4547,7 @@ function test_diffutils()
 function build_bison()
 {
   # https://www.gnu.org/software/bison/
-  # https://ftp.gnu.org/gnu/bison/
+  # https://ftpmirror.gnu.org/gnu/bison/
 
   # https://archlinuxarm.org/packages/aarch64/bison/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=bison-git
@@ -4564,7 +4564,7 @@ function build_bison()
   local bison_src_folder_name="bison-${bison_version}"
 
   local bison_archive="${bison_src_folder_name}.tar.xz"
-  local bison_url="https://ftp.gnu.org/gnu/bison/${bison_archive}"
+  local bison_url="https://ftpmirror.gnu.org/gnu/bison/${bison_archive}"
 
   local bison_folder_name="${bison_src_folder_name}"
 
@@ -4854,7 +4854,7 @@ function test_flex()
 function build_make()
 {
   # https://www.gnu.org/software/make/
-  # https://ftp.gnu.org/gnu/make/
+  # https://ftpmirror.gnu.org/gnu/make/
 
   # https://archlinuxarm.org/packages/aarch64/make/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=make-git
@@ -4870,7 +4870,7 @@ function build_make()
 
   # bz2 available up to 4.2.1, gz available on all.
   local make_archive="${make_src_folder_name}.tar.gz"
-  local make_url="https://ftp.gnu.org/gnu/make/${make_archive}"
+  local make_url="https://ftpmirror.gnu.org/gnu/make/${make_archive}"
 
   local make_folder_name="${make_src_folder_name}"
 
@@ -4994,7 +4994,7 @@ function test_make()
 function build_wget()
 {
   # https://www.gnu.org/software/wget/
-  # https://ftp.gnu.org/gnu/wget/
+  # https://ftpmirror.gnu.org/gnu/wget/
 
   # https://archlinuxarm.org/packages/aarch64/wget/files/PKGBUILD
   # https://git.archlinux.org/svntogit/packages.git/tree/trunk/PKGBUILD?h=packages/wget
@@ -5015,7 +5015,7 @@ function build_wget()
   local wget_src_folder_name="wget-${wget_version}"
 
   local wget_archive="${wget_src_folder_name}.tar.gz"
-  local wget_url="https://ftp.gnu.org/gnu/wget/${wget_archive}"
+  local wget_url="https://ftpmirror.gnu.org/gnu/wget/${wget_archive}"
 
   local wget_folder_name="${wget_src_folder_name}"
 
@@ -5140,7 +5140,7 @@ function test_wget()
 function build_texinfo()
 {
   # https://www.gnu.org/software/texinfo/
-  # https://ftp.gnu.org/gnu/texinfo/
+  # https://ftpmirror.gnu.org/gnu/texinfo/
 
   # https://archlinuxarm.org/packages/aarch64/texinfo/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=texinfo-svn
@@ -5155,7 +5155,7 @@ function build_texinfo()
   local texinfo_src_folder_name="texinfo-${texinfo_version}"
 
   local texinfo_archive="${texinfo_src_folder_name}.tar.gz"
-  local texinfo_url="https://ftp.gnu.org/gnu/texinfo/${texinfo_archive}"
+  local texinfo_url="https://ftpmirror.gnu.org/gnu/texinfo/${texinfo_archive}"
 
   local texinfo_folder_name="${texinfo_src_folder_name}"
 
@@ -8130,7 +8130,7 @@ function test_tcl()
 function build_guile()
 {
   # https://www.gnu.org/software/guile/
-  # https://ftp.gnu.org/gnu/guile/
+  # https://ftpmirror.gnu.org/gnu/guile/
 
   # https://archlinuxarm.org/packages/aarch64/guile/files/PKGBUILD
   # https://github.com/Homebrew/homebrew-core/blob/master/Formula/guile.rb
@@ -8146,7 +8146,7 @@ function build_guile()
   local guile_src_folder_name="guile-${guile_version}"
 
   local guile_archive="${guile_src_folder_name}.tar.xz"
-  local guile_url="https://ftp.gnu.org/gnu/guile/${guile_archive}"
+  local guile_url="https://ftpmirror.gnu.org/gnu/guile/${guile_archive}"
 
   local guile_folder_name="${guile_src_folder_name}"
 
@@ -8635,8 +8635,8 @@ function test_sphinx()
 function build_autogen()
 {
   # https://www.gnu.org/software/autogen/
-  # https://ftp.gnu.org/gnu/autogen/
-  # https://ftp.gnu.org/gnu/autogen/rel5.18.16/autogen-5.18.16.tar.xz
+  # https://ftpmirror.gnu.org/gnu/autogen/
+  # https://ftpmirror.gnu.org/gnu/autogen/rel5.18.16/autogen-5.18.16.tar.xz
 
   # https://archlinuxarm.org/packages/aarch64/autogen/files/PKGBUILD
   # https://github.com/Homebrew/homebrew-core/blob/master/Formula/autogen.rb
@@ -8648,7 +8648,7 @@ function build_autogen()
   local autogen_src_folder_name="autogen-${autogen_version}"
 
   local autogen_archive="${autogen_src_folder_name}.tar.xz"
-  local autogen_url="https://ftp.gnu.org/gnu/autogen/rel${autogen_version}/${autogen_archive}"
+  local autogen_url="https://ftpmirror.gnu.org/gnu/autogen/rel${autogen_version}/${autogen_archive}"
 
   local autogen_folder_name="${autogen_src_folder_name}"
 
@@ -8800,8 +8800,8 @@ function test_autogen()
 function build_bash()
 {
   # https://www.gnu.org/software/bash/
-  # https://ftp.gnu.org/gnu/bash/
-  # https://ftp.gnu.org/gnu/bash/bash-5.0.tar.gz
+  # https://ftpmirror.gnu.org/gnu/bash/
+  # https://ftpmirror.gnu.org/gnu/bash/bash-5.0.tar.gz
 
   # https://archlinuxarm.org/packages/aarch64/bash/files/PKGBUILD
 
@@ -8815,7 +8815,7 @@ function build_bash()
   local bash_src_folder_name="bash-${bash_version}"
 
   local bash_archive="${bash_src_folder_name}.tar.gz"
-  local bash_url="https://ftp.gnu.org/gnu/bash/${bash_archive}"
+  local bash_url="https://ftpmirror.gnu.org/gnu/bash/${bash_archive}"
 
   local bash_folder_name="${bash_src_folder_name}"
 

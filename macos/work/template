@@ -74,7 +74,7 @@ function do_zzz()
 
   local zzz_folder_name="zzz-${zzz_version}"
   local zzz_archive="${zzz_folder_name}.tar.xz"
-  # local zzz_url="https://ftp.gnu.org/gnu/zzz/${zzz_archive}"
+  # local zzz_url="https://ftpmirror.gnu.org/gnu/zzz/${zzz_archive}"
   local zzz_url="https://github.com/gnu-mcu-eclipse/files/raw/master/libs/${zzz_archive}"
 
   local zzz_stamp_file_path="${STAMPS_FOLDER_PATH}/stamp-zzz-${zzz_version}-installed"

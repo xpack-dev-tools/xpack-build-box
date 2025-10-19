@@ -270,8 +270,8 @@ function test_gmp()
 function build_mpfr()
 {
   # http://www.mpfr.org
-  # https://ftp.gnu.org/gnu/mpfr/
-  # https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.xz
+  # https://ftpmirror.gnu.org/gnu/mpfr/
+  # https://ftpmirror.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.xz
   # https://www.mpfr.org/mpfr-4.0.2/mpfr-4.0.2.tar.xz
 
   # https://archlinuxarm.org/packages/aarch64/mpfr/files/PKGBUILD
@@ -286,7 +286,7 @@ function build_mpfr()
   local mpfr_src_folder_name="mpfr-${mpfr_version}"
 
   local mpfr_archive="${mpfr_src_folder_name}.tar.xz"
-  local mpfr_url="https://ftp.gnu.org/gnu/mpfr/${mpfr_archive}"
+  local mpfr_url="https://ftpmirror.gnu.org/gnu/mpfr/${mpfr_archive}"
 
   local mpfr_folder_name="${mpfr_src_folder_name}"
 
@@ -405,8 +405,8 @@ function test_mpfr()
 function build_mpc()
 {
   # http://www.multiprecision.org/
-  # https://ftp.gnu.org/gnu/mpc
-  # https://ftp.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
+  # https://ftpmirror.gnu.org/gnu/mpc
+  # https://ftpmirror.gnu.org/gnu/mpc/mpc-1.0.3.tar.gz
 
   # https://archlinuxarm.org/packages/aarch64/mpc/files/PKGBUILD
   # https://git.archlinux.org/svntogit/packages.git/tree/trunk/PKGBUILD?h=packages/libmpc
@@ -657,7 +657,7 @@ function test_isl()
 function build_nettle()
 {
   # https://www.lysator.liu.se/~nisse/nettle/
-  # https://ftp.gnu.org/gnu/nettle/
+  # https://ftpmirror.gnu.org/gnu/nettle/
 
   # https://archlinuxarm.org/packages/aarch64/nettle/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=nettle-git
@@ -801,7 +801,7 @@ function build_tasn1()
 {
   # https://www.gnu.org/software/libtasn1/
   # http://ftp.gnu.org/gnu/libtasn1/
-  # https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.12.tar.gz
+  # https://ftpmirror.gnu.org/gnu/libtasn1/libtasn1-4.12.tar.gz
 
   # https://archlinuxarm.org/packages/aarch64/libtasn1/files/PKGBUILD
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=libtasn1-git
@@ -2850,8 +2850,8 @@ function test_libxcrypt()
 function build_libunistring()
 {
   # https://www.gnu.org/software/libunistring/
-  # https://ftp.gnu.org/gnu/libunistring/
-  # https://ftp.gnu.org/gnu/libunistring/libunistring-0.9.10.tar.xz
+  # https://ftpmirror.gnu.org/gnu/libunistring/
+  # https://ftpmirror.gnu.org/gnu/libunistring/libunistring-0.9.10.tar.xz
 
   # https://archlinuxarm.org/packages/aarch64/libunistring/files/PKGBUILD
 
@@ -2862,7 +2862,7 @@ function build_libunistring()
   local libunistring_src_folder_name="libunistring-${libunistring_version}"
 
   local libunistring_archive="${libunistring_src_folder_name}.tar.xz"
-  local libunistring_url="https://ftp.gnu.org/gnu/libunistring/${libunistring_archive}"
+  local libunistring_url="https://ftpmirror.gnu.org/gnu/libunistring/${libunistring_archive}"
 
   local libunistring_folder_name="${libunistring_src_folder_name}"
 
@@ -3292,8 +3292,8 @@ function test_ncurses()
 function build_readline()
 {
   # https://tiswww.case.edu/php/chet/readline/rltop.html
-  # https://ftp.gnu.org/gnu/readline/
-  # https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz
+  # https://ftpmirror.gnu.org/gnu/readline/
+  # https://ftpmirror.gnu.org/gnu/readline/readline-8.0.tar.gz
 
   # depends=(glibc gcc-libs)
   # https://archlinuxarm.org/packages/aarch64/readline/files/PKGBUILD
@@ -3309,7 +3309,7 @@ function build_readline()
   local readline_src_folder_name="readline-${readline_version}"
 
   local readline_archive="${readline_src_folder_name}.tar.gz"
-  local readline_url="https://ftp.gnu.org/gnu/readline/${readline_archive}"
+  local readline_url="https://ftpmirror.gnu.org/gnu/readline/${readline_archive}"
 
   # The folder name  for build, licenses, etc.
   local readline_folder_name="${readline_src_folder_name}"

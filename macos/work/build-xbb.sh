@@ -578,7 +578,7 @@ function build_xz()
 function build_tar()
 {
   # https://www.gnu.org/software/tar/
-  # https://ftp.gnu.org/gnu/tar/
+  # https://ftpmirror.gnu.org/gnu/tar/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=tar-git
 
   # 2016-05-16
@@ -588,7 +588,7 @@ function build_tar()
 
   XBB_TAR_FOLDER="tar-${XBB_TAR_VERSION}"
   XBB_TAR_ARCHIVE="${XBB_TAR_FOLDER}.tar.xz"
-  XBB_TAR_URL="https://ftp.gnu.org/gnu/tar/${XBB_TAR_ARCHIVE}"
+  XBB_TAR_URL="https://ftpmirror.gnu.org/gnu/tar/${XBB_TAR_ARCHIVE}"
 
   # Requires xz
   echo
@@ -818,7 +818,7 @@ function build_libffi()
 function build_nettle()
 {
   # https://www.lysator.liu.se/~nisse/nettle/
-  # https://ftp.gnu.org/gnu/nettle/
+  # https://ftpmirror.gnu.org/gnu/nettle/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=nettle-git
 
   # 2017-11-19
@@ -826,7 +826,7 @@ function build_nettle()
 
   XBB_NETTLE_FOLDER="nettle-${XBB_NETTLE_VERSION}"
   XBB_NETTLE_ARCHIVE="${XBB_NETTLE_FOLDER}.tar.gz"
-  XBB_NETTLE_URL="https://ftp.gnu.org/gnu/nettle/${XBB_NETTLE_ARCHIVE}"
+  XBB_NETTLE_URL="https://ftpmirror.gnu.org/gnu/nettle/${XBB_NETTLE_ARCHIVE}"
 
   echo
   echo "Building nettle ${XBB_NETTLE_VERSION}..."
@@ -880,7 +880,7 @@ function build_tasn1()
   XBB_TASN1_FOLDER="libtasn1-${XBB_TASN1_VERSION}"
   # .gz only.
   XBB_TASN1_ARCHIVE="${XBB_TASN1_FOLDER}.tar.gz"
-  XBB_TASN1_URL="https://ftp.gnu.org/gnu/libtasn1/${XBB_TASN1_ARCHIVE}"
+  XBB_TASN1_URL="https://ftpmirror.gnu.org/gnu/libtasn1/${XBB_TASN1_ARCHIVE}"
 
   echo
   echo "Building tasn1 ${XBB_TASN1_VERSION}..."
@@ -971,7 +971,7 @@ function build_gnutls()
 function build_m4()
 {
   # https://www.gnu.org/software/m4/
-  # https://ftp.gnu.org/gnu/m4/
+  # https://ftpmirror.gnu.org/gnu/m4/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=m4-git
 
   # 2016-12-31
@@ -979,7 +979,7 @@ function build_m4()
 
   XBB_M4_FOLDER="m4-${XBB_M4_VERSION}"
   XBB_M4_ARCHIVE="${XBB_M4_FOLDER}.tar.xz"
-  XBB_M4_URL="https://ftp.gnu.org/gnu/m4/${XBB_M4_ARCHIVE}"
+  XBB_M4_URL="https://ftpmirror.gnu.org/gnu/m4/${XBB_M4_ARCHIVE}"
 
   echo
   echo "Building m4 ${XBB_M4_VERSION}..."
@@ -1014,7 +1014,7 @@ function build_m4()
 function build_gawk()
 {
   # https://www.gnu.org/software/gawk/
-  # https://ftp.gnu.org/gnu/gawk/
+  # https://ftpmirror.gnu.org/gnu/gawk/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gawk-git
 
   # 2017-10-19
@@ -1022,7 +1022,7 @@ function build_gawk()
 
   XBB_GAWK_FOLDER="gawk-${XBB_GAWK_VERSION}"
   XBB_GAWK_ARCHIVE="${XBB_GAWK_FOLDER}.tar.xz"
-  XBB_GAWK_URL="https://ftp.gnu.org/gnu/gawk/${XBB_GAWK_ARCHIVE}"
+  XBB_GAWK_URL="https://ftpmirror.gnu.org/gnu/gawk/${XBB_GAWK_ARCHIVE}"
 
   echo
   echo "Building gawk ${XBB_GAWK_VERSION}..."
@@ -1059,7 +1059,7 @@ function build_gawk()
 function build_autoconf()
 {
   # https://www.gnu.org/software/autoconf/
-  # https://ftp.gnu.org/gnu/autoconf/
+  # https://ftpmirror.gnu.org/gnu/autoconf/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=autoconf-git
 
   # 2012-04-24
@@ -1067,7 +1067,7 @@ function build_autoconf()
 
   XBB_AUTOCONF_FOLDER="autoconf-${XBB_AUTOCONF_VERSION}"
   XBB_AUTOCONF_ARCHIVE="${XBB_AUTOCONF_FOLDER}.tar.xz"
-  XBB_AUTOCONF_URL="https://ftp.gnu.org/gnu/autoconf/${XBB_AUTOCONF_ARCHIVE}"
+  XBB_AUTOCONF_URL="https://ftpmirror.gnu.org/gnu/autoconf/${XBB_AUTOCONF_ARCHIVE}"
 
   echo
   echo "Building autoconf ${XBB_AUTOCONF_VERSION}..."
@@ -1102,7 +1102,7 @@ function build_autoconf()
 function build_automake()
 {
   # https://www.gnu.org/software/automake/
-  # https://ftp.gnu.org/gnu/automake/
+  # https://ftpmirror.gnu.org/gnu/automake/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=automake-git
 
   # 2015-01-05
@@ -1110,7 +1110,7 @@ function build_automake()
 
   XBB_AUTOMAKE_FOLDER="automake-${XBB_AUTOMAKE_VERSION}"
   XBB_AUTOMAKE_ARCHIVE="${XBB_AUTOMAKE_FOLDER}.tar.xz"
-  XBB_AUTOMAKE_URL="https://ftp.gnu.org/gnu/automake/${XBB_AUTOMAKE_ARCHIVE}"
+  XBB_AUTOMAKE_URL="https://ftpmirror.gnu.org/gnu/automake/${XBB_AUTOMAKE_ARCHIVE}"
 
   echo
   echo "Building automake ${XBB_AUTOMAKE_VERSION}..."
@@ -1189,7 +1189,7 @@ function build_libtool()
 function build_gettext()
 {
   # https://www.gnu.org/software/gettext/
-  # https://ftp.gnu.org/gnu/gettext/
+  # https://ftpmirror.gnu.org/gnu/gettext/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gettext-git
 
   # 2016-06-09
@@ -1197,7 +1197,7 @@ function build_gettext()
 
   XBB_GETTEXT_FOLDER="gettext-${XBB_GETTEXT_VERSION}"
   XBB_GETTEXT_ARCHIVE="${XBB_GETTEXT_FOLDER}.tar.xz"
-  XBB_GETTEXT_URL="https://ftp.gnu.org/gnu/gettext/${XBB_GETTEXT_ARCHIVE}"
+  XBB_GETTEXT_URL="https://ftpmirror.gnu.org/gnu/gettext/${XBB_GETTEXT_ARCHIVE}"
 
   echo
   echo "Building gettext ${XBB_GETTEXT_VERSION}..."
@@ -1234,7 +1234,7 @@ function build_gettext()
 function build_patch()
 {
   # https://www.gnu.org/software/patch/
-  # https://ftp.gnu.org/gnu/patch/
+  # https://ftpmirror.gnu.org/gnu/patch/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=patch-git
 
   # 2015-03-06
@@ -1242,7 +1242,7 @@ function build_patch()
 
   XBB_PATCH_FOLDER="patch-${XBB_PATCH_VERSION}"
   XBB_PATCH_ARCHIVE="${XBB_PATCH_FOLDER}.tar.xz"
-  XBB_PATCH_URL="https://ftp.gnu.org/gnu/patch/${XBB_PATCH_ARCHIVE}"
+  XBB_PATCH_URL="https://ftpmirror.gnu.org/gnu/patch/${XBB_PATCH_ARCHIVE}"
 
   echo
   echo "Building patch ${XBB_PATCH_VERSION}..."
@@ -1277,7 +1277,7 @@ function build_patch()
 function build_diffutils()
 {
   # https://www.gnu.org/software/diffutils/
-  # https://ftp.gnu.org/gnu/diffutils/
+  # https://ftpmirror.gnu.org/gnu/diffutils/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=diffutils-git
 
   # 2017-05-21
@@ -1285,7 +1285,7 @@ function build_diffutils()
 
   XBB_DIFFUTILS_FOLDER="diffutils-${XBB_DIFFUTILS_VERSION}"
   XBB_DIFFUTILS_ARCHIVE="${XBB_DIFFUTILS_FOLDER}.tar.xz"
-  XBB_DIFFUTILS_URL="https://ftp.gnu.org/gnu/diffutils/${XBB_DIFFUTILS_ARCHIVE}"
+  XBB_DIFFUTILS_URL="https://ftpmirror.gnu.org/gnu/diffutils/${XBB_DIFFUTILS_ARCHIVE}"
 
   echo
   echo "Building diffutils ${XBB_DIFFUTILS_VERSION}..."
@@ -1320,7 +1320,7 @@ function build_diffutils()
 function build_bison()
 {
   # https://www.gnu.org/software/bison/
-  # https://ftp.gnu.org/gnu/bison/
+  # https://ftpmirror.gnu.org/gnu/bison/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=bison-git
 
   # 2015-01-23
@@ -1328,7 +1328,7 @@ function build_bison()
 
   XBB_BISON_FOLDER="bison-${XBB_BISON_VERSION}"
   XBB_BISON_ARCHIVE="${XBB_BISON_FOLDER}.tar.xz"
-  XBB_BISON_URL="https://ftp.gnu.org/gnu/bison/${XBB_BISON_ARCHIVE}"
+  XBB_BISON_URL="https://ftpmirror.gnu.org/gnu/bison/${XBB_BISON_ARCHIVE}"
 
   echo
   echo "Building bison ${XBB_BISON_VERSION}..."
@@ -1363,7 +1363,7 @@ function build_bison()
 function build_make()
 {
   # https://www.gnu.org/software/make/
-  # https://ftp.gnu.org/gnu/make/
+  # https://ftpmirror.gnu.org/gnu/make/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=make-git
 
   # 2016-06-10
@@ -1372,7 +1372,7 @@ function build_make()
   XBB_MAKE_FOLDER="make-${XBB_MAKE_VERSION}"
   # Only .bz2 available.
   XBB_MAKE_ARCHIVE="${XBB_MAKE_FOLDER}.tar.bz2"
-  XBB_MAKE_URL="https://ftp.gnu.org/gnu/make/${XBB_MAKE_ARCHIVE}"
+  XBB_MAKE_URL="https://ftpmirror.gnu.org/gnu/make/${XBB_MAKE_ARCHIVE}"
 
   echo
   echo "Building make ${XBB_MAKE_VERSION}..."
@@ -1447,7 +1447,7 @@ function build_libiconv()
 function build_wget()
 {
   # https://www.gnu.org/software/wget/
-  # https://ftp.gnu.org/gnu/wget/
+  # https://ftpmirror.gnu.org/gnu/wget/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=wget-git
 
   # 2016-06-10
@@ -1455,7 +1455,7 @@ function build_wget()
 
   XBB_WGET_FOLDER="wget-${XBB_WGET_VERSION}"
   XBB_WGET_ARCHIVE="${XBB_WGET_FOLDER}.tar.xz"
-  XBB_WGET_URL="https://ftp.gnu.org/gnu/wget/${XBB_WGET_ARCHIVE}"
+  XBB_WGET_URL="https://ftpmirror.gnu.org/gnu/wget/${XBB_WGET_ARCHIVE}"
 
   # http://git.savannah.gnu.org/cgit/wget.git/tree/configure.ac
 
@@ -1507,7 +1507,7 @@ function build_wget()
 function build_texinfo()
 {
   # https://www.gnu.org/software/texinfo/
-  # https://ftp.gnu.org/gnu/texinfo/
+  # https://ftpmirror.gnu.org/gnu/texinfo/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=texinfo-svn
 
   # 2017-09-12
@@ -1515,7 +1515,7 @@ function build_texinfo()
 
   XBB_TEXINFO_FOLDER="texinfo-${XBB_TEXINFO_VERSION}"
   XBB_TEXINFO_ARCHIVE="${XBB_TEXINFO_FOLDER}.tar.gz"
-  XBB_TEXINFO_URL="https://ftp.gnu.org/gnu/texinfo/${XBB_TEXINFO_ARCHIVE}"
+  XBB_TEXINFO_URL="https://ftpmirror.gnu.org/gnu/texinfo/${XBB_TEXINFO_ARCHIVE}"
 
   # GCC: Texinfo version 4.8 or later is required by make pdf.
 
@@ -2049,7 +2049,7 @@ function build_dos2unix()
 
 function build_native_binutils()
 {
-  # https://ftp.gnu.org/gnu/binutils/
+  # https://ftpmirror.gnu.org/gnu/binutils/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=binutils-git
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gdb-git
 
@@ -2058,7 +2058,7 @@ function build_native_binutils()
 
   XBB_BINUTILS_FOLDER="binutils-${XBB_BINUTILS_VERSION}"
   XBB_BINUTILS_ARCHIVE="${XBB_BINUTILS_FOLDER}.tar.xz"
-  XBB_BINUTILS_URL="https://ftp.gnu.org/gnu/binutils/${XBB_BINUTILS_ARCHIVE}"
+  XBB_BINUTILS_URL="https://ftpmirror.gnu.org/gnu/binutils/${XBB_BINUTILS_ARCHIVE}"
 
   # Requires gmp, mpfr, mpc, isl.
   echo
@@ -2107,7 +2107,7 @@ function build_native_binutils()
 function build_native_gcc()
 {
   # https://gcc.gnu.org
-  # https://ftp.gnu.org/gnu/gcc/
+  # https://ftpmirror.gnu.org/gnu/gcc/
   # https://gcc.gnu.org/wiki/InstallingGCC
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=gcc-git
 
@@ -2116,7 +2116,7 @@ function build_native_gcc()
 
   XBB_GCC_FOLDER="gcc-${XBB_GCC_VERSION}"
   XBB_GCC_ARCHIVE="${XBB_GCC_FOLDER}.tar.xz"
-  XBB_GCC_URL="https://ftp.gnu.org/gnu/gcc/gcc-${XBB_GCC_VERSION}/${XBB_GCC_ARCHIVE}"
+  XBB_GCC_URL="https://ftpmirror.gnu.org/gnu/gcc/gcc-${XBB_GCC_VERSION}/${XBB_GCC_ARCHIVE}"
   XBB_GCC_BRANDING="xPack Build Box GCC\x2C ${BITS}-bits"
 
   # Requires gmp, mpfr, mpc, isl.
@@ -2213,7 +2213,7 @@ __EOF__
 
 function build_mingw_binutils()
 {
-  # https://ftp.gnu.org/gnu/binutils/
+  # https://ftpmirror.gnu.org/gnu/binutils/
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=mingw-w64-binutils-weak
 
   # 2017-07-24
@@ -2221,7 +2221,7 @@ function build_mingw_binutils()
 
   XBB_MINGW_BINUTILS_FOLDER="binutils-${XBB_MINGW_BINUTILS_VERSION}"
   XBB_MINGW_BINUTILS_ARCHIVE="${XBB_MINGW_BINUTILS_FOLDER}.tar.xz"
-  XBB_MINGW_BINUTILS_URL="https://ftp.gnu.org/gnu/binutils/${XBB_MINGW_BINUTILS_ARCHIVE}"
+  XBB_MINGW_BINUTILS_URL="https://ftpmirror.gnu.org/gnu/binutils/${XBB_MINGW_BINUTILS_ARCHIVE}"
 
   echo
   echo "Building mingw-w64 binutils ${XBB_MINGW_BINUTILS_VERSION}..."
@@ -2331,13 +2331,13 @@ function do_mingw_gcc()
   # https://gcc.gnu.org/wiki/InstallingGCC
   # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=mingw-w64-gcc
 
-  # https://ftp.gnu.org/gnu/gcc/
+  # https://ftpmirror.gnu.org/gnu/gcc/
   # 2017-08-14
   XBB_MINGW_GCC_VERSION="7.2.0"
 
   XBB_MINGW_GCC_FOLDER="gcc-${XBB_MINGW_GCC_VERSION}"
   XBB_MINGW_GCC_ARCHIVE="${XBB_MINGW_GCC_FOLDER}.tar.xz"
-  XBB_MINGW_GCC_URL="https://ftp.gnu.org/gnu/gcc/gcc-${XBB_MINGW_GCC_VERSION}/${XBB_MINGW_GCC_ARCHIVE}"
+  XBB_MINGW_GCC_URL="https://ftpmirror.gnu.org/gnu/gcc/gcc-${XBB_MINGW_GCC_VERSION}/${XBB_MINGW_GCC_ARCHIVE}"
   XBB_MINGW_GCC_BRANDING="xPack Build Box GCC\x2C ${BITS}-bits"
 
   echo
