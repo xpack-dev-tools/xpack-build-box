@@ -37,9 +37,9 @@
   "homepage": "https://xpack-dev-tools.github.io/xpack-build-box/",
   "dependencies": {},
   "devDependencies": {
-    "del-cli": "^6.0.0",
+    "del-cli": "^7.0.0",
     "json": "^11.0.0",
-    "liquidjs": "^10.19.1"
+    "liquidjs": "^10.22.0"
   },
   "bundleDependencies": [],
   "topConfig": {
