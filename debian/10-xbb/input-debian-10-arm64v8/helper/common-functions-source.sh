@@ -5,6 +5,10 @@
 #
 # Permission to use, copy, modify, and/or distribute this software
 # for any purpose is hereby granted, under the terms of the MIT license.
+#
+# If a copy of the license was not distributed with this file, it can
+# be obtained from https://opensource.org/licenses/mit.
+#
 # -----------------------------------------------------------------------------
 
 # Common functions used for building the XBB environments.
@@ -729,6 +733,10 @@ function create_xbb_source()
 #
 # Permission to use, copy, modify, and/or distribute this software
 # for any purpose is hereby granted, under the terms of the MIT license.
+#
+# If a copy of the license was not distributed with this file, it can
+# be obtained from https://opensource.org/licenses/mit.
+#
 # -----------------------------------------------------------------------------
 
 __EOF__
