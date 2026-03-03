@@ -1,5 +1,6 @@
 
 [![license](https://img.shields.io/github/license/xpack-dev-tools/xpack-build-box)](https://github.com/xpack-dev-tools/xpack-build-box/blob/master/LICENSE)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fxpack-dev-tools.github.io%2Fxpack-build-box%2F)](https://xpack-dev-tools.github.io/xpack-build-box/)
 
 # The xPack Build Box
 
