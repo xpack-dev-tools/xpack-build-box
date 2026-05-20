@@ -1,0 +1,15 @@
+{
+  "customGettingStartedTitle": "Getting Started with the xPack Build Box",
+  "metadataDescription": "The environment used to build the xPack Binary Development Tools",
+  "metadataKeywords": "xpack, build, box",
+  "tagline": "The environment used to build the xPack Binary Development Tools",
+  "title": "XBB - The xPack Build Box",
+  "hasCustomGettingStarted": true,
+  "hasCustomHomepageFeatures": true,
+  "hasCustomInstall": true,
+  "hasCustomMaintainer": true,
+  "hasCustomUser": true,
+  "hasCustomUserSidebar": true,
+  "skipContributorGuide": true,
+  "skipInstallCommand": true
+}
