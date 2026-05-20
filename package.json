@@ -2,17 +2,6 @@
   "name": "xpack-build-box",
   "version": "6.0.0",
   "description": "XBB - The xPack Build Box",
-  "main": "",
-  "scripts": {
-    "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh --xpack-dev-tools",
-    "npm-install": "npm install",
-    "npm-link-helpers": "npm link @xpack/npm-packages-helper @xpack/docusaurus-template-liquid",
-    "npm-outdated": "npm outdated",
-    "deep-clean": "del-cli node_modules package-lock.json *.tgz",
-    "npm-pack": "npm pack",
-    "npm-link": "npm link",
-    "postversion": "git push origin --all && git push origin --tags"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xpack-dev-tools/xpack-build-box.git"
@@ -41,10 +30,15 @@
     "json": "^11.0.0",
     "liquidjs": "^10.23.0"
   },
-  "bundleDependencies": [],
-  "topConfig": {
-    "descriptiveName": "xPack Build Box",
-    "permalinkName": "xbb"
+  "scripts": {
+    "generate-top-commons": "bash node_modules/@xpack/npm-packages-helper/maintenance-scripts/generate-top-commons.sh --xpack-dev-tools",
+    "npm-install": "npm install",
+    "npm-link-helpers": "npm link @xpack/npm-packages-helper @xpack/docusaurus-template-liquid",
+    "npm-outdated": "npm outdated",
+    "deep-clean": "del-cli node_modules package-lock.json *.tgz",
+    "npm-pack": "npm pack",
+    "npm-link": "npm link",
+    "postversion": "git push origin --all && git push origin --tags"
   },
   "engines": {
     "node": ">=20.0"
