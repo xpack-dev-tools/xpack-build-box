@@ -1,7 +1,7 @@
-# The Ubuntu XBB - production Docker images
+# The Ubuntu XBB - DEPRECATED Docker images
 
-Note: This page is dedicated to the production version of the
-Ubuntu XBB, used for building distribution packages.
+Note: This page is dedicated to the versions based on
+Ubuntu, used for building distribution packages.
 The Ubuntu XBB used for native builds is documented in the
 separate [README-NATIVE](README-NATIVE.md) page.
 
