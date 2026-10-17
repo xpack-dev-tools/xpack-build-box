@@ -49,9 +49,19 @@ unset TERM
 
 # -----------------------------------------------------------------------------
 
+if is_aarch64
+then
+  run_verbose dpkg --add-architecture armhf
+fi
+
+run_verbose apt-get update
+
+# -----------------------------------------------------------------------------
+
 # https://wiki.debian.org/Locale
-# run_verbose apt-get install --yes locales
-# run_verbose locale-gen en_US.UTF-8
+run_verbose apt-get install --yes locales
+sed -i.bak -e 's|# en_US.UTF-8|en_US.UTF-8|' /etc/locale.gen
+run_verbose locale-gen en_US.UTF-8
 run_verbose update-locale LANG=en_US.UTF-8
 
 # Must be passed as `ENV TZ=UTC` in Dockerfile.
@@ -62,13 +72,22 @@ run_verbose apt-get --yes install tzdata
 
 # -----------------------------------------------------------------------------
 
+# Replaced by source build.
+# python3 \
+# python3-pip \
+
+# Not present on Debian, specific headers installed separately.
+# linux-headers-generic \
+
 # Keep it to a minimum.
-run_verbose apt-get -qq install -y \
+# g++ required for the clang tests.
+run_verbose apt-get install --yes \
 \
 autoconf \
 automake \
 bison \
 bzip2 \
+build-essential \
 ca-certificates \
 coreutils \
 cpio \
@@ -77,6 +96,7 @@ diffutils \
 dos2unix \
 file \
 flex \
+g++ \
 gawk \
 gettext \
 git \
@@ -85,7 +105,6 @@ help2man \
 libatomic1 \
 libc6-dev \
 libtool \
-linux-headers-generic \
 lsb-release \
 m4 \
 make \
@@ -93,8 +112,6 @@ patch \
 perl \
 pkg-config \
 python \
-python3 \
-python3-pip \
 re2c \
 rhash \
 rsync \
@@ -109,8 +126,30 @@ xz-utils \
 zip \
 zlib1g-dev
 
-# Not available on aarch64.
-# g++-multilib
+if is_intel
+then
+  run_verbose apt-get install --yes \
+    linux-headers-4.19.0-20-all-amd64
+elif is_aarch64
+then
+  run_verbose apt-get install --yes \
+    linux-headers-4.19.0-20-all-arm64
+elif is_arm32
+then
+  run_verbose apt-get install --yes \
+    linux-headers-4.19.0-20-all-armhf
+fi
+
+if is_intel
+then
+  run_verbose apt-get install --yes g++-multilib
+elif is_aarch64
+then
+  run_verbose apt-get install --yes \
+    crossbuild-essential-armhf \
+    libc6:armhf \
+    libstdc++6:armhf
+fi
 
 # For QEMU
 run_verbose apt-get install --yes \
@@ -121,6 +160,46 @@ mesa-common-dev
 # For QEMU & OpenOCD
 run_verbose apt-get install --yes \
 libudev-dev
+
+# -----------------------------------------------------------------------------
+# Build Python3 from sources.
+
+# build-essential wget pkg-config - already installed
+
+run_verbose apt-get install --yes zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
+
+mkdir -pv ~/Work/python3
+cd ~/Work/python3
+
+# Keep in sync with the version installed on macOS.
+PYTHON_VERSION="3.11.4"
+
+run_verbose curl -L https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz -o Python-${PYTHON_VERSION}.tgz
+run_verbose tar -xf Python-${PYTHON_VERSION}.tgz
+
+cd Python-${PYTHON_VERSION}/
+run_verbose ./configure --enable-optimizations
+
+run_verbose make -j $(nproc)
+run_verbose make install
+
+hash -r
+
+run_verbose python3 --version
+
+echo "[curl -sS https://bootstrap.pypa.io/get-pip.py | python3]"
+curl -sS https://bootstrap.pypa.io/get-pip.py | python3
+
+run_verbose pip3 --version
+run_verbose pip3 list
+
+# Cleanups.
+rm -rf ~/Work/python3
+
+# Try to avoid leaking development packages into the final image.
+run_verbose apt-get remove --yes zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
+
+run_verbose apt-get autoremove --yes
 
 # -----------------------------------------------------------------------------
 

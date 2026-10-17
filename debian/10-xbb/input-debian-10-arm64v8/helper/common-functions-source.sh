@@ -250,6 +250,17 @@ function is_arm()
   fi
 }
 
+function is_aarch64()
+{
+  local machine="$(uname -m)"
+  if [ "${machine}" == "aarch64" ]
+  then
+    return 0
+  else
+    return 1
+  fi
+}
+
 function prepare_xbb_env()
 {
   XBB_PARENT_FOLDER_PATH=${XBB_PARENT_FOLDER_PATH:=""}
