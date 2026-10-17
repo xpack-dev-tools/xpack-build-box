@@ -47,11 +47,17 @@ According to [SemVer](https://semver.org) rules:
 > Major version X (X.y.z | X > 0) MUST be incremented if any
 backwards incompatible changes are introduced to the public API.
 
-### v3.0
+The breaking changes introduced in each major release are documented in
+reverse chronological order. This information provides a comprehensive
+overview of significant modifications and is readily available in the
+respective release notes.
 
-The v3.0 release was the first production ready solution. It used very large
-custom Docker images for GNU/Linux and folders with compiled tools
-for macOS.
+
+### v6.0.0
+
+The v6.0.0 release upgrades the base version to GLIBC 2.28 and macOS 11.0.
+It also discontinues support for Arm 32-bit. The Docker images are based
+on Debian 10.
 
 ### v5.0.0
 
@@ -59,10 +65,11 @@ The v5.0.0 is the first self-sustained release,
 which allows to build new binary xpm packages using previous package releases,
 without requiring any custom Docker images, or other compiled tools
 
-### v6.0.0
+### v3.0
 
-The v6.0.0 release upgrades the base version to GLIBC 2.28 and macOS 11.0.
-It also discontinues support for Arm 32-bit.
+The v3.0 release was the first production ready solution. It used very large
+custom Docker images for GNU/Linux and folders with compiled tools
+for macOS.
 
 <CommonLicense />
 
